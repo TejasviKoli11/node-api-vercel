@@ -1,7 +1,13 @@
-const mongoose = required('mongoose');
-const express = required('express');
-const ventDataModel = required('./models/vent-data.js');
+/**
+ * Author Juniper Grunow
+ * Date: 6/6/2023
+ */
+const mongoose = require('mongoose');
+const express = require('express');
+const ventDataModel = require("../../models/ventdata.js");
 const app = express();
+//placeholder for database connection
+mongoose.connect("");
 
 app.get("/ventData", async (req, res) =>{
     //this needs to validated, passing user's id
@@ -24,3 +30,5 @@ app.post("/ventData", async (req, res) =>{
         res.status(500).send(error);
     }
 });
+
+module.exports=app;

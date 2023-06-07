@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import "./loadEnvironment.mjs";
+import mongoose from "mongoose";
 import ventScedRoute from "./routes/api/ventsched.js";
 import ventDataRoute from "./routes/api/ventdata.js";
 const PORT = process.env.PORT || 5050;
@@ -9,9 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const query = 'mongodb+srv://testAdmin:testAdmin@cluster0.xfuh1g6.mongodb.net/?retryWrites=true&w=majority';
-
-const db = query;
+const dbo = require("./db/conn");
 
 mongoose.connect(db, {
     useNewUrlParse: true,

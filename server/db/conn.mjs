@@ -1,16 +1,26 @@
 import { MongoClient } from "mongodb";
 
-const connectionString = process.env.ATLAS_URI || "";
+const connectionString = process.env.ATLAS_URI;
 
-const client = new MongoClient(connectionString);
+const client = new MongoClient(connectionString,{
+    userNewUrlParse:true,
+    useUnifiedTopology:true,
+});
 
-let conn;
-try{
-    conn = await client.connect();
-} catch(e){
-    console.error(e);
-}
+var _db;
 
-let db = conn.db("users")
+module.exports = {
+    connectToServer: function(callback){
+        client.connect(function(err, db){
+            if(db){
+                _db = db.db("employees");
+                console.log("Successfully connected to MongoDB");
 
-export default db;
+            }
+            return callback(err);
+        });
+    },
+    getDb: function() {
+        return _db;
+    },
+};

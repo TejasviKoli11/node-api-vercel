@@ -1,6 +1,10 @@
-const mongoose = required('mongoose');
-const express = rquired('express');
-const ventSchedModel = required('./models/vent-schedule.js');
+/**
+ * Author Juniper Grunow
+ * Date: 6/6/2023
+ */
+const mongoose = require('mongoose');
+const express = require('express');
+const ventSchedModel = require('../../models/ventschedule.js');
 const app = express();
 
 app.get("/ventSched", async (req, res)=>{
@@ -26,7 +30,7 @@ app.post("/ventScehd", async (request, response) => {
 });
  app.patch("/ventSched/:id", async (req, res) => {
     try{
-        await ventSchedModel.findByIdAndUpdate(request.params.id, request.body);
+        await ventSchedModel.findByIdAndUpdate(req.params.id, request.body);
         await ventSchedModel.save();
         response.send(ventSched);
     }catch (error) {
@@ -36,7 +40,7 @@ app.post("/ventScehd", async (request, response) => {
 
 app.delete("/ventSched/:id", async (req, res) => {
     try {
-        const ventSched = await ventSchedModel.findByIdAndDelete(request.params.id);
+        const ventSched = await ventSchedModel.findByIdAndDelete(req.params.id);
 
         if (!ventSched){
             res.status(404).send("No vent Schedule Found!");
