@@ -7,7 +7,6 @@ const express = require('express');
 const ventDataModel = require("../../models/ventdata.js");
 const app = express();
 //placeholder for database connection
-mongoose.connect("");
 
 app.get("/ventData", async (req, res) =>{
     //this needs to validated, passing user's id
