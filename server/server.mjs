@@ -12,6 +12,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+//generic route for testing if server is live
+app.get('/', (req,res)=>{
+    res.json({mssg:'We are live PEOPLE!'})
+})
 //Routes
 app.use(ventScedRoute);
 app.use(ventDataRoute);
