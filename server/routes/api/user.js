@@ -20,7 +20,7 @@ router.get("/:email", async (req,res)=>{
 });
 
 //Create new user
-router.post("/", async (req, res) => {
+router.post("/user", async (req, res) => {
     let newDocument = {
         //needs to be filled more completely
         email: req.body.email,
