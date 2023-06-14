@@ -28,7 +28,7 @@ app.post("/ventScehd", async (request, response) => {
         response.status(500).send(error);
     }
 });
- app.patch("/ventSched/:id", async (req, res) => {
+ app.put("/ventSched/:id", async (req, res) => {
     try{
         await ventSchedModel.findByIdAndUpdate(req.params.id, request.body);
         await ventSchedModel.save();
