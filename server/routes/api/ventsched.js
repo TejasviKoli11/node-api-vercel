@@ -1,4 +1,5 @@
 /**
+ * Routing for the ventsched, including all CRUD functions.
  * Author Juniper Grunow
  * Date: 6/6/2023
  */
@@ -6,7 +7,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 const ventSchedModel = require('../../models/ventschedule.js');
 const app = express();
-
+//retrieves a new vent schedule, needs the vent id to be passed as an argument
 app.get("/ventSched", async (req, res)=>{
     //needs the ventID passed to it
     const ventSced = await ventSchedModel.find({deviceID: req.params.deviceID}).exec();
@@ -17,7 +18,7 @@ app.get("/ventSched", async (req, res)=>{
         res.status(500).send(error);
     }
 })
-
+//Creates a new vent schedule
 app.post("/ventScehd", async (request, response) => {
     const ventSched = new ventSchedModel(request.body);
 
@@ -28,6 +29,7 @@ app.post("/ventScehd", async (request, response) => {
         response.status(500).send(error);
     }
 });
+//Updates an existing vent schedule, requires vent id
  app.patch("/ventSched/:id", async (req, res) => {
     try{
         await ventSchedModel.findByIdAndUpdate(req.params.id, request.body);
@@ -37,7 +39,7 @@ app.post("/ventScehd", async (request, response) => {
         response.status(500).send(error);
     }
  });
-
+//Deletes an existing vent schedule, requires vent id
 app.delete("/ventSched/:id", async (req, res) => {
     try {
         const ventSched = await ventSchedModel.findByIdAndDelete(req.params.id);
@@ -51,6 +53,5 @@ app.delete("/ventSched/:id", async (req, res) => {
     }
 });
 
-
-
+//vent
 module.exports = app;

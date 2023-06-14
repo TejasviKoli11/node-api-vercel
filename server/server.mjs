@@ -3,6 +3,8 @@ import cors from "cors";
 import mongoose from "mongoose";
 import ventScedRoute from "./routes/api/ventsched.js";
 import ventDataRoute from "./routes/api/ventdata.js";
+import buildingRoute from "./routes/api/BuildingRouting.js";
+import roomRoute from "./routes/api/RoomRouting.js"
 import 'dotenv/config';
 
 
@@ -19,8 +21,11 @@ app.get('/', (req,res)=>{
 //Routes
 app.use(ventScedRoute);
 app.use(ventDataRoute);
+app.use(buildingRoute);
+app.use(roomRoute);
 
 //connect to the db and starts server
+//the mongodb atlas server is currently in connect from any ip, this is temp for developpment purposes. Don't let me forget to change this.
 mongoose.connect(process.env.ATLAS_URI)
     .then(()=>{
         app.listen(PORT, () =>{

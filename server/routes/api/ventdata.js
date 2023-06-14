@@ -6,8 +6,8 @@ const mongoose = require('mongoose');
 const express = require('express');
 const ventDataModel = require("../../models/ventdata.js");
 const app = express();
-//placeholder for database connection
 
+//Retrieves a vent data object
 app.get("/ventData", async (req, res) =>{
     //this needs to validated, passing user's id
     const ventData = await ventDataModel.find({owner: req.params.users.id});
@@ -18,7 +18,7 @@ app.get("/ventData", async (req, res) =>{
         res.status(500).send(error);
     }
 });
-
+//Creates a new vent data object
 app.post("/ventData", async (req, res) =>{
     const ventData = new ventDataModel(req.body);
 

@@ -6,11 +6,11 @@ const roomSchema = new Schema ({
     floor:Number,
     roomId:String,
     building:{
-        type:mongoose.Schema.Type.ObjectId, 
+        type:mongoose.Schema.Types.ObjectId, 
         ref:"building",
     },
 
 });
 
 const room = model("room", roomSchema);
-export default room;
+module.export = room;

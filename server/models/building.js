@@ -7,4 +7,4 @@ const BuildingSchema = new Schema ({
     floors:Number,
 });
 const building =model("building", BuildingSchema);
-export default building;
+module.exports = building;
