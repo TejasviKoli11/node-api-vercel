@@ -1,0 +1,39 @@
+.container {
+    
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: hsl(140, 77%, 62%);
+    border-radius: 5px;
+  }
+  
+  .head {
+    text-align: center;
+  }
+  
+  .formdisplay {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  .labelforpass {
+    margin-bottom: 5px;
+  }
+  
+  .settingPass {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .pressbtn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .linkstopages{
+    background-color: bisque;
+  }
+  
