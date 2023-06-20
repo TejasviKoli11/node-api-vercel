@@ -2,16 +2,21 @@ const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
 
 const userSchema = new Schema({
-    username: String,
-    firstName: String,
-    lastName: String,
-    isVerified: Boolean,
-    lastLogin: Date,
+    username: {String,require:true},
+    firstName: {String,require:true},
+    lastName: {String,require:true},
+    isVerified: {Boolean,require:true, default:false},
+    lastLogin:{Date,require:true},
     //not final
     homegroup: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'homeGroup'
+        ref: 'homeGroup',
+        require:true,
+
     },
+    role:{String, enum:[null,'technician','admin']},
+    
+
     
 
 });

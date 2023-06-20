@@ -4,7 +4,8 @@ import mongoose from "mongoose";
 import ventScedRoute from "./routes/api/ventsched.js";
 import ventDataRoute from "./routes/api/ventdata.js";
 import buildingRoute from "./routes/api/BuildingRouting.js";
-import roomRoute from "./routes/api/RoomRouting.js"
+import roomRoute from "./routes/api/RoomRouting.js";
+import homeGroupRoute from "./routes/api/homegroup.js";
 import 'dotenv/config';
 
 
@@ -23,6 +24,7 @@ app.use(ventScedRoute);
 app.use(ventDataRoute);
 app.use(buildingRoute);
 app.use(roomRoute);
+app.use(homeGroupRoute);
 
 //connect to the db and starts server
 //the mongodb atlas server is currently in connect from any ip, this is temp for developpment purposes. Don't let me forget to change this.

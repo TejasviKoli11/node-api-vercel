@@ -17,7 +17,7 @@ app.get("/ventSched", async (req, res)=>{
     } catch (error) {
         res.status(500).send(error);
     }
-})
+});
 //Creates a new vent schedule
 app.post("/ventScehd", async (request, response) => {
     const ventSched = new ventSchedModel(request.body);
