@@ -9,40 +9,53 @@ const SignUpPage = () => {
   const [submittedUsername, setSubmittedUsername] = useState("");
   const [submittedEmail, setSubmittedEmail] = useState("");
   const [errors, setErrors] = useState({});
-
   const handleSubmit = (e) => {
     e.preventDefault();
-
     // Validate form fields
     const formErrors = {};
     if (username.trim() === "") {
+
       formErrors.username = "Required field";
+
     }
     if (email.trim() === "") {
+
       formErrors.email = "Required field";
+
     }
     if (password.trim() === "") {
-      formErrors.password = "Required field";
-    }
 
+      formErrors.password = "Required field";
+
+    }
     // Display errors if any, otherwise submit the form
+
     if (Object.keys(formErrors).length > 0) {
+
       setErrors(formErrors);
+
     } else {
+
       // Handle form submission (e.g., send data to backend)
+
       console.log("Form submitted:", { username, email, password });
       setIsSubmitted(true);
       setSubmittedUsername(username);
       setSubmittedEmail(email);
+
       // Reset form fields and errors
+
       setUsername("");
       setEmail("");
       setPassword("");
       setErrors({});
+
     }
+
   };
 
   return (
+
     <div className={styles.background}>
     <div className={styles.container}>
       <h1 className={styles.title}>Sign Up</h1>
@@ -56,7 +69,9 @@ const SignUpPage = () => {
           onChange={(e) => setUsername(e.target.value)}
           required
           className={styles.input}
+
         />
+
         {errors.username && <span className={styles.error}>{errors.username}</span>}
 
         <label htmlFor="email" className={styles.label}>Email:</label>
@@ -69,6 +84,7 @@ const SignUpPage = () => {
           required
           className={styles.input}
         />
+
         {errors.email && <span className={styles.error}>{errors.email}</span>}
 
         <label htmlFor="password" className={styles.label}>Password:</label>
@@ -81,10 +97,13 @@ const SignUpPage = () => {
           required
           className={styles.input}
         />
-        {errors.password && <span className={styles.error}>{errors.password}</span>}
 
+        {errors.password && <span className={styles.error}>{errors.password}</span>}
         <input type="submit" value="Sign Up" className={styles.button} />
       </form>
+
+
+
 
       {isSubmitted && (
         <div className={styles.successMessage}>
@@ -93,11 +112,9 @@ const SignUpPage = () => {
           <p>Email: {submittedEmail}</p>
         </div>
       )}
+
     </div>
     </div>
   );
 };
-
 export default SignUpPage;
-
-

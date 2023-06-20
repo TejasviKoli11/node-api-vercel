@@ -1,39 +1,82 @@
-.container {
-    
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: hsl(140, 77%, 62%);
-    border-radius: 5px;
-  }
-  
-  .head {
-    text-align: center;
-  }
-  
-  .formdisplay {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-  }
-  
-  .labelforpass {
-    margin-bottom: 5px;
-  }
-  
-  .settingPass {
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .pressbtn {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  .linkstopages{
-    background-color: bisque;
-  }
-  
+.app {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  gap: 20px;
+  height: 97vh;
+  background-color: #a2f3b8;
+}
+
+.heading{
+  background: #035036;
+}
+
+.username {
+  height: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.btnsubmit {
+  margin-top: 10px;
+  font-size: 15px;
+  background: #01d28e;
+  border: 1px solid #01d28e;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.buttoncontainer {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.buttoncontainer :hover {
+  color: black;
+}
+
+.fgtpass {
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.loginform {
+  background-color: rgb(255, 255, 255);
+  padding: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.listcontainer {
+  display: flex;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.title {
+  font-size: 25px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  color: #035036;
+}
+
+.inputcontainer {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #555555;
+  border: none;
+
+}
