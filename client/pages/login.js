@@ -11,6 +11,9 @@ import React, {useState} from "react";
 
 export default function LoginPage() {
 
+
+  const navigate = useNavigate();
+
     //react states for checking
     const[errorMessage, setErrorMessage] = useState({});
     const [isSubmitted, setSubmitted] = useState(false);
@@ -39,8 +42,11 @@ export default function LoginPage() {
       };
     
       const handleSubmit = (event) => {
+
+        
         //Prevent page reload
         event.preventDefault();
+        navigate('/ventinfo');
     
         var { uname, pass } = document.forms[0];
     
@@ -67,7 +73,7 @@ export default function LoginPage() {
           <div className={styles.error}>{errorMessage.message}</div>
         );
     
-      // JSX code for login form
+      //code for login form
       const renderForm = (
         <div className={styles.form}> 
           <form onSubmit={handleSubmit}>
@@ -88,7 +94,7 @@ export default function LoginPage() {
           <Link href="/forgotpass" className={styles.fgtpass}>
             Forgot Password?
           </Link>
-        </div>  
+        </div> 
       );
     
       return (
