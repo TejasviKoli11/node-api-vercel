@@ -3,36 +3,32 @@
  * Date: 5/24/2023
  * 
  */
-import express from "express";
-import db from "../db/conn.mjs";
-import { ObjectId } from "mongodb";
+const mongoose = require('mongoose');
+const express = require('express');
+const userModel = require('../../models/user.js');
+const app = express();
 //all this might need to be redone with mongoose, but should translate easy enough
 
-const router = express.Router();
 //Gets user based on email
-router.get("/:email", async (req,res)=>{
-    let collection = await db.collection("users");
-    let query = {_email: new ObjectId(req.params.email)};
-    let result = await collection.findOne(query);
+app.get("/user/:email", async (req,res)=>{
+   const method = req.body.reason;
+   if(method.equals("deactivate")){
 
-    if(!result) res.send("Not Found").status(404);
-    else res.send(result).status(200);
+   }
+   if(method.equals(get)){
+    const userObj = userModel.find({email: req.body.email}).exec();
+    try {
+        res.send(userObj);
+    } catch (error) {
+        res.status(500).send(error);
+    }
+   }
+
 });
 
 //Create new user
-router.post("/user", async (req, res) => {
-    let newDocument = {
-        //needs to be filled more completely
-        email: req.body.email,
-        firstName: req.body.firstName,
-        lastName: req.body.Lastname,
-        isVerified: false,
-        role: null,
-        lastLogin: new  Date(),
-        //needs to be generated, and then check to see if home group string is already in use
-        homegroup: req.body.homegroup,
-    };
-    let collection = await db.collection("users");
-    let result = await collection.insertOne(newDocument);
-    res.send(result).status(204);
+app.post("/user", async (req, res) => {
+   
 });
+
+module.exports = app;

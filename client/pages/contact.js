@@ -1,16 +1,15 @@
 import Link from 'next/link';
 import styles from './contact.module.css';
-import { FaHome, FaPhone, FaEnvelope, FaFax } from 'react-icons/fa';
+import { FaHome, FaPhone, FaEnvelope, FaFax } from 'react-icons/fa'; 
 
-
-function ContactUs() {
-    return (
+function ContactUs() {       
+    return (    
 <div>
-      <nav className={styles.siteNavigation}>
+      <nav className={styles.siteNavigation}>   
         <div className={styles.logo}>
           <Link href="/">
-              <button className={styles.logoButton}>Smart Vents</button>
-          </Link>
+              <button className={styles.logoButton}>Smart Vents</button>  
+          </Link>     
         </div>
         <div className={styles.menu}>
         <Link href="/login">
@@ -27,11 +26,7 @@ function ContactUs() {
             </Link>
         </div>
       </nav>
-
-      <p>This will be te contact us page and is under working</p>
-
-
-
+      
 
       <div>
             <footer className={styles.footer}>

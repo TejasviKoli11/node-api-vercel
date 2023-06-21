@@ -13,5 +13,14 @@ const ventSchema = new Schema({
         ref:'room'
     }
 });
+
+//middleware
+ventSchema.pre('save', function(){
+
+});
+ventSchema.post('save', function(){
+
+});
+
 const vent = model('Vent', ventSchema);
 export default vent;

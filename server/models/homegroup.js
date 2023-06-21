@@ -17,7 +17,7 @@ const HomeGroupSchema = new Schema({
         ref:'rooms'
     }],
 
-})
+});
 
 const homeGroup = model("homegroup", HomeGroupSchema);
 module.exports = homeGroup;

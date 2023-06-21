@@ -12,6 +12,9 @@ const ventData = new Schema({
     samplesCnt:{type:Number, required:true}, 
 });
 
+//middleware
+
+
 module.exports = mongoose.model(
     'ventData', ventData, 'VentData'
 );
