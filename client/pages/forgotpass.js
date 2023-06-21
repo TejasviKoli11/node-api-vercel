@@ -4,7 +4,7 @@ function ForgotPassword() {
     return (
         <div>
         <h1>Forgot Password Page</h1>
-        <p>This is the forgot password page of our application.</p>
+        <p>This is the forgot password page of your application.</p>
         <Link href="/login">
           Login
         </Link>
