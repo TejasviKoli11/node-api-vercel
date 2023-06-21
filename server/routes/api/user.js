@@ -11,7 +11,19 @@ const app = express();
 
 //Gets user based on email
 app.get("/user/:email", async (req,res)=>{
-   
+   const method = req.body.reason;
+   if(method.equals("deactivate")){
+
+   }
+   if(method.equals(get)){
+    const userObj = userModel.find({email: req.body.email}).exec();
+    try {
+        res.send(userObj);
+    } catch (error) {
+        res.status(500).send(error);
+    }
+   }
+
 });
 
 //Create new user
