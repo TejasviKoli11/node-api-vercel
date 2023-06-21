@@ -2,14 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-<<<<<<< HEAD
-  "/": "pages/index.js",
-  "/contact": "pages/contact.js"
-=======
-  "/contact": "pages/contact.js",
-  "/signup": "pages/signup.js",
-  "/login": "pages/login.js",
   "/about": "pages/about.js",
-  "/": "pages/index.js"
->>>>>>> 9ed203097e088f33045254abe3862b2a2c0c29e2
+  "/contact": "pages/contact.js"
 }

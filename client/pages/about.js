@@ -28,20 +28,46 @@ function AboutUs() {
         </div>
       </nav>
 
-      <p>em Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      <h1>About us</h1>
+      <h2>The Founder</h2> 
+     
+      <p>Hi, I am Moustapha. A software developer is a professional 
+        who designs, creates, and maintains software applications. 
+        They are skilled in programming languages and frameworks 
+        and are responsible for translating user requirements 
+        into functional and efficient software solutions. 
+        Here's a typical biography of a software developer:
+        I am Moustapha a highly skilled software developer with
+        a passion for creating innovative and user-friendly applications. 
+        With more than 10 years of experience in the field, they have a 
+        strong foundation in software development principles and practices.</p>
 
-        Why do we use it?
-        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+        <p>This is our innovative website named Smart vents which connects
+          the vents with app web application and give the all 
+          information about vent status.
+          SmartLabs wishes to circumvent the wasted energy problem by developing a way to monitor
+          energy consumption of each individual room within a home. The project will provide building
+          owners with a way to view the consumption data and a way to control their heating system
+          remotely. The project consists of two parts: the web and the server which will be connected
+          to the various parts of the system: the database, the web pages, and the vents within the
+          owner’s building. </p>
 
+          <h1> Technology -Everything in today's world.....</h1>
 
-        Where does it come from?
-        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-
-        Where can I get some?
-        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
-      </p>
+          <p>The Smart Heat Control System will be implemented in homes, corporate facilities, and
+          public institutions. The system will consist of existing hardware from Smart Labs and
+          previous project groups, and the web/mobile interface our group will create. The group will
+          also create and implement a server and a database for the system. The web should be
+          accessible anywhere the user or building owner is, as long as they have an internet
+          connection. The current general heating system for an average home is a central furnace that blows
+          warm air into connected vents which circulates the air throughout the building. The furnace is
+          connected to a thermometer which becomes active when the temperature reaches a
+          minimum temperature threshold. With the current system, each room receives the same
+          amount of heat. The problem with this system is that not all rooms are occupied at any given
+          time. Some rooms are unoccupied for extended periods of time, for example: the living room
+          during the night when the homeowners would be asleep. This means that with the current
+          system, as all rooms are given the same amount of warm air, energy is wasted on heating
+          up the rooms during long unoccupied periods. </p> 
 
 
 

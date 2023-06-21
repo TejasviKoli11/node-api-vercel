@@ -26,47 +26,7 @@ function ContactUs() {
             </Link>
         </div>
       </nav>
-      <h1>About us</h1>
-      <h2>The Founder</h2> 
-     
-      <p>Hi, I am Moustapha. A software developer is a professional 
-        who designs, creates, and maintains software applications. 
-        They are skilled in programming languages and frameworks 
-        and are responsible for translating user requirements 
-        into functional and efficient software solutions. 
-        Here's a typical biography of a software developer:
-        I am Moustapha a highly skilled software developer with
-        a passion for creating innovative and user-friendly applications. 
-        With more than 10 years of experience in the field, they have a 
-        strong foundation in software development principles and practices.</p>
-
-        <p>This is our innovative website named Smart vents which connects
-          the vents with app web application and give the all 
-          information about vent status.
-          SmartLabs wishes to circumvent the wasted energy problem by developing a way to monitor
-          energy consumption of each individual room within a home. The project will provide building
-          owners with a way to view the consumption data and a way to control their heating system
-          remotely. The project consists of two parts: the web and the server which will be connected
-          to the various parts of the system: the database, the web pages, and the vents within the
-          owner’s building. </p>
-
-          <h1> Technology -Everything in today's world.....</h1>
-
-          <p>The Smart Heat Control System will be implemented in homes, corporate facilities, and
-          public institutions. The system will consist of existing hardware from Smart Labs and
-          previous project groups, and the web/mobile interface our group will create. The group will
-          also create and implement a server and a database for the system. The web should be
-          accessible anywhere the user or building owner is, as long as they have an internet
-          connection. The current general heating system for an average home is a central furnace that blows
-          warm air into connected vents which circulates the air throughout the building. The furnace is
-          connected to a thermometer which becomes active when the temperature reaches a
-          minimum temperature threshold. With the current system, each room receives the same
-          amount of heat. The problem with this system is that not all rooms are occupied at any given
-          time. Some rooms are unoccupied for extended periods of time, for example: the living room
-          during the night when the homeowners would be asleep. This means that with the current
-          system, as all rooms are given the same amount of warm air, energy is wasted on heating
-          up the rooms during long unoccupied periods. </p> 
-
+      
 
       <div>
             <footer className={styles.footer}>
