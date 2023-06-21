@@ -21,5 +21,7 @@ const userSchema = new Schema({
 
 });
 
+//middleware
+
 const User = model('User', userSchema)
 module.exports= User;

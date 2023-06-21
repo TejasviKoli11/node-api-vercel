@@ -10,5 +10,9 @@ const BuildingSchema = new Schema ({
         ref:'rooms'
 }],
 });
+
+//middleware
+
+
 const building =model("building", BuildingSchema);
 module.exports = building;

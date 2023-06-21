@@ -24,7 +24,7 @@ app.post("/ventScehd", async (request, response) => {
 
     try{
         await ventSched.save();
-        response.send(ventSched);
+        response.save(ventSched);
     }catch{
         response.status(500).send(error);
     }
