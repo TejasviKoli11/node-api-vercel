@@ -5,10 +5,11 @@
 const mongoose = require('mongoose');
 const express = require('express');
 const ventDataModel = require("../../models/ventdata.js");
+const ventdata = require('../../models/ventdata.js');
 const app = express();
 
 //Retrieves a vent data object
-app.get("/ventData", async (req, res) =>{
+app.get("/ventData/:owner", async (req, res) =>{
     //this needs to validated, passing user's id
     const ventData = await ventDataModel.find({owner: req.params.user.id});
 
@@ -30,4 +31,12 @@ app.post("/ventData", async (req, res) =>{
     }
 });
 
+app.delete("/ventData/:id", async(req,res)=>{
+    try{
+        const ventData = await ventDataModel.findByIdAndDelete(req.params.id).exec();
+        res.send(ventData);
+    }catch (error){
+        res.status(500).send(error);
+    }
+})
 module.exports=app;
