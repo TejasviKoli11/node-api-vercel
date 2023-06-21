@@ -32,7 +32,7 @@ app.post("/ventScehd", async (request, response) => {
 //Updates an existing vent schedule, requires vent id
  app.patch("/ventSched/:id", async (req, res) => {
     try{
-        await ventSchedModel.findByIdAndUpdate(req.params.id, request.body);
+        await ventSchedModel.findByIdAndUpdate(req.params.id, req.body);
         await ventSchedModel.save();
         response.send(ventSched);
     }catch (error) {
