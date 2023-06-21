@@ -43,5 +43,6 @@ app.get("/homegroup", async(req, res)=>{
         res.status(304).send(error);
     }
 });
+//middleware
 
 module.exports = app;
