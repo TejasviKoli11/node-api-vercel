@@ -13,6 +13,9 @@ app.get("/user/:email", async (req,res)=>{
     const userObj = userModel.find({email: req.body.email}).exec();
     
     try {
+        if(userObj.isVerfied==false){
+            
+        }
         res.send(userObj);
     } catch (error) {
         res.status(500).send(error);
