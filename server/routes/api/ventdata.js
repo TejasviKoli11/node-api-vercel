@@ -5,7 +5,6 @@
 const mongoose = require('mongoose');
 const express = require('express');
 const ventDataModel = require("../../models/ventdata.js");
-const ventdata = require('../../models/ventdata.js');
 const app = express();
 
 //Retrieves a vent data object
@@ -38,5 +37,8 @@ app.delete("/ventData/:id", async(req,res)=>{
     }catch (error){
         res.status(500).send(error);
     }
-})
+});
+
+
+
 module.exports=app;
