@@ -2,7 +2,8 @@ const mongoose = require("mongoose");
 const {Schema, model } = mongoose;
 
 const ventSchema = new Schema({
-    ventId:String,
+    name:{type:String, required:true},
+    deviceID: { type: String, required: true, unique: true },
     macAddress:String,
     owner:{
         type:mongoose.Schema.Types.ObjectId,
@@ -13,5 +14,13 @@ const ventSchema = new Schema({
         ref:'room'
     }
 });
+
+//middleware
+ventSchema.pre('save', function(){
+
+});
+
+
+
 const vent = model('Vent', ventSchema);
-export default vent;
+module.exports = vent;
