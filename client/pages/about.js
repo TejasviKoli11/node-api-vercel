@@ -67,6 +67,7 @@ function AboutUs() {
           </ul>
         </div>
 
+
         <div className={styles.column}>
 
           <h3 id={styles.h3f}>Company</h3>
