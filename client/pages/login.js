@@ -65,9 +65,9 @@ export default function LoginPage() {
 
             //-----------------------------------
             if (userData.username === "Aman"){
-              router.push('/technicianVentInfo');
+              router.push('/uservents');
             } else {
-              router.push('/adminVentInfo');
+              router.push('/technicianVentInfo');
             }
             //-------------------------------------
           }
