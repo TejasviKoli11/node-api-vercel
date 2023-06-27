@@ -6,42 +6,119 @@
 const mongoose = require('mongoose');
 const express = require('express');
 const userModel = require('../../models/user.js');
+const building = require('../../models/building.js');
 const app = express();
+const jwt = require('jsonwebtoken');
 
-//Gets user based on email
-app.get("/user/:email", async (req,res)=>{
-    const userObj = userModel.find({email: req.body.email}).exec();
-    
-    try {
-        if(userObj.isVerfied==false){
-            
-        }
-        res.send(userObj);
-    } catch (error) {
-        res.status(500).send(error);
-    }
-});
 
 //Create new user
 app.post("/user", async (req, res) => {
-   
+   const existing = await userModel.findOne({email:req.body.email});
+   if(!existing){
+        const newUser = userModel(req.body);
+        newUser.isVerified=false;
+        newUser.save();
+   }
+    
 });
 
 //Update Userbased on user id
 app.patch("/user/:id", async(req,res)=>{
-    
+    const user = await userModel.findOne({email:req.body.email});
+    if(user){
+        user.firstName = req.body.firstName;
+        user.lastName = req.body.lastName;
+        user.email = req.body.email;
+        user.password = req.body.password;
+        user.username = req.body.username;
+        user.save();
+        res.status(400).send(user);
+    }
 });
 
 //Deletes User based on user id
 app.delete("/user/:id", async(req,res)=>{
     try{
-        const user = await userModel.findByIdAndDelete(req.params.id).exec();
+        const user = await userModel.findByIdAndDelete(req.body.id).exec();
         res.send(user);
     }catch(error){
         res.status(500).send(error);
     }
 });
 
+app.post("/login", async (req,res)=>{
+    const email = req.body.email;
+    const password = req.body.password;
+    console.log(email,password);
+    const user = await userModel.findOne({email: email}).exec();
+    console.log(user);
+    if(user){
+        if(user.isVerified){
+            if(password==user.password){
+                const token = jwt.sign({id:user._id}, process.env.SECRET);
+                res.cookie('token',token,{
+                    expires:new Date(Date.now()+(60*60*100)),
+                    httpOnly:true,
+                    secure:true,
+                });
+                res.json({
+                    message:'logged in',
+                    body:{
+                        token:token,
+                        user:{
+                            id:user._id,
+                            email:user.email,
+                            role:user.role,
+                            firstName:user.firstName,
+                            lastName:user.lastName,
 
+                        }
+                    }
+                })
+                return;
+            }else{
+                res.send({message:"wrong"});
+                return;
+            }
+        }
+        res.send({message:"notVerified"});
+        return;
+    }else{
+        res.send("not found");
+        return;
+    }
+});
+
+app.get("/userStuffs", async (req,res)=>{
+    const buildingModel = require("../../models/building.js");
+    const roomModel = require("../../models/room.js");
+    const ventModel = require("../../models/vents.js");
+    
+    try{
+        const buildings = await buildingModel.find({owner:req.body.id}).exec();
+        var rooms = [];
+        var vents = [];
+        buildings.forEach(async function(place) {
+            place.rooms.forEach(async function(roomId){
+                var tempRoom = await roomModel.findById(roomId);
+                console.log(tempRoom.name);
+                rooms.push(tempRoom);
+                rooms.push("1");
+            });
+        });
+        rooms.forEach(async function(room){
+            const tempVent =  await ventModel.find({room:room._id});
+            console.log(room.name);
+            console.log(vents.name);
+            vents.push(tempVent);
+        })
+       
+        
+    }catch(error){
+        console.log(error);
+    }
+    res.send(buildings);
+    console.log(rooms[0]);
+});
 
 module.exports = app;

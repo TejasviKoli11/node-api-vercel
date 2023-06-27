@@ -1,7 +1,15 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
+  "/about": "pages/about.html",
+  "/adminVentInfo": "pages/adminVentInfo.html",
+  "/forgotpass": "pages/forgotpass.html",
+  "/": "pages/index.html",
+  "/login": "pages/login.html",
+  "/contact": "pages/contact.html",
+  "/signup": "pages/signup.html",
+  "/technicianVentInfo": "pages/technicianVentInfo.html",
+  "/uservents": "pages/uservents.html",
   "/_document": "pages/_document.js",
-  "/login": "pages/login.js",
-  "/uservents": "pages/uservents.js"
+  "/404": "pages/404.html"
 }
