@@ -16,10 +16,22 @@ const ventSchema = new Schema({
 });
 
 //middleware
-ventSchema.pre('save', function(){
-
+ventSchema.pre('save', async function(next){
+    const vent = this;
+    const roomModel = require("./room.js");
+    const room = await roomModel.findById(vent.room);
+    room.vents.push(vent._id);
+    room.save();
+    next();
 });
 
+ventSchema.pre('deleteOne', async function(next){
+    const vent = this;
+    const roomModel = require("./room.js");
+    console.log(vent.room);
+    const room = await roomModel.updateOne({_id:vent.room},{$ :{vents:vent._id}});
+    next();
+})
 
 
 const vent = model('Vent', ventSchema);
