@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import Link from 'next/link';
 import styles from './contact.module.css';
 import { FaHome, FaPhone, FaEnvelope, FaFax } from 'react-icons/fa'; 
@@ -26,6 +27,15 @@ function ContactUs() {
             </Link>
         </div>
       </nav>
+      
+      <div>
+      <h1> By phone</h1>
+      <h2> Monday to Friday, 9am to 4pm MST </h2>
+      <h2> Phone Number : +1 4034151434</h2> </div>
+
+      
+
+      
       
 
       <div>
