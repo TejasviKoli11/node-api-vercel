@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const room = require("./room");
 const { Schema, model } = mongoose;
 
 const BuildingSchema = new Schema ({
@@ -15,6 +16,10 @@ const BuildingSchema = new Schema ({
 });
 
 //middleware
+BuildingSchema.pre("findByIdAndDelete",function(next){
+    room.deleteMany({building:this.model.ObjectId}).exec();
+    next();
+});
 
 
 const building =model("building", BuildingSchema);

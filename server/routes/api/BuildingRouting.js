@@ -42,7 +42,7 @@ routing.post('/buildings', async (req, res) => {
     if(!userObj){
       throw Error("User does not exist");
     }
-    
+
     await building.save();
     res.status(201).json(building);
   } catch (error) {
@@ -71,6 +71,7 @@ routing.patch('/buildings/:id', async (req, res) => {
 routing.delete('/buildings/:id', async (req, res) => {
   try {
     const building = await Building.findByIdAndDelete(req.params.id);
+
     if (!building) {
       return res.status(404).json({ error: 'Building not found.' });
     }

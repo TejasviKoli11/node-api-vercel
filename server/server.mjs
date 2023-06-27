@@ -42,6 +42,9 @@ mongoose.connect(process.env.ATLAS_URI)
         console.log(error);
     });
 
+import ventModel from "./models/vents.js";
+
+const vent = await ventModel.deleteOne({_id:'6493d1b28b6fba2816ead241'});
 
 
 
