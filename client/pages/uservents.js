@@ -1,31 +1,26 @@
-import Link from 'next/link';
-import styles from './contact.module.css';
-import { FaHome, FaPhone, FaEnvelope, FaFax } from 'react-icons/fa';
+import React from 'react';
+import axios from 'axios';
 
+const UsersPage = ({ users }) => {
+  return (
+    <div>
+      <h1>User List:</h1>
+      <ul>
+        {users.map((user) => (
+          <li key={user._id}>{user.username}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
-function user() {
-    return (
-<div>
-      <nav className={styles.siteNavigation}>
-        <div className={styles.logo}>
-          <Link href="/">
-              <button className={styles.logoButton}>Smart Vents</button>
-          </Link>
-        </div>
-        <div className={styles.menu}>
-        <Link href="/login">
-        <p className={styles.button}> Login </p>
-            </Link>
-            <Link href="/signup">
-            <p className={styles.button}> Sign Up </p>
-            </Link>
-        </div>
-      </nav>
+export async function getServerSideProps() {
+  const response = await axios.get('http://localhost:3000/api/user');
+  const users = response.data;
 
-      <p>This will be the technician vent info page and is under working</p>
-
-      </div>
-    );
-  }
-  
-  export default user;
+  return {
+    props: {
+      users,
+    },
+  };
+}
