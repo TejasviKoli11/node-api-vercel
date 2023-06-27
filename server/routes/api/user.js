@@ -9,7 +9,7 @@ const userModel = require('../../models/user.js');
 const building = require('../../models/building.js');
 const app = express();
 const jwt = require('jsonwebtoken');
-
+const bcrypt =require('bcrypt');
 
 //Create new user
 app.post("/user", async (req, res) => {
@@ -17,9 +17,13 @@ app.post("/user", async (req, res) => {
    if(!existing){
         const newUser = userModel(req.body);
         newUser.isVerified=false;
+        const hashPass = await bcrypt.hash(newUser.password,10);
+        newUser.password = hashPass;
         newUser.save();
+        res.send("user Created");
+        return;
    }
-    
+    res.send("Email already in use");
 });
 
 //Update Userbased on user id
@@ -54,7 +58,8 @@ app.post("/login", async (req,res)=>{
     console.log(user);
     if(user){
         if(user.isVerified){
-            if(password==user.password){
+            const verifiedPass = await bcrypt.compare(req.body.password, user.password)
+            if(verifiedPass){
                 const token = jwt.sign({id:user._id}, process.env.SECRET);
                 res.cookie('token',token,{
                     expires:new Date(Date.now()+(60*60*100)),
