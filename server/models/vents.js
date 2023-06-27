@@ -29,7 +29,7 @@ ventSchema.pre('deleteOne', async function(next){
     const vent = this;
     const roomModel = require("./room.js");
     console.log(vent.room);
-    const room = await roomModel.updateOne({_id:vent.room},{$pull:{vents:vent._id}});
+    const room = await roomModel.updateOne({_id:vent.room},{$ :{vents:vent._id}});
     next();
 })
 
