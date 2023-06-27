@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import styles from './uservents.module.css';
 import axios from 'axios';
 
 const HomePage = () => {
@@ -36,6 +37,23 @@ const HomePage = () => {
 
   return (
     <div>
+
+
+<nav className={styles.siteNavigation}>
+            <div className={styles.logo}>
+              <Link href="/">
+                  <button className={styles.logoButton}>Smart Vents</button>
+              </Link>
+            </div>
+            <div className={styles.menu}>
+              <Link href="/login">
+              <p className={styles.button}> Log Out </p>
+              </Link>
+            </div>
+          </nav>
+
+
+
       <h1>Room Data</h1>
       <ul>
         {roomData.map((room) => (
@@ -56,9 +74,6 @@ const HomePage = () => {
           </li>
         ))}
       </ul>
-      <Link href="/login">
-            <p> Login </p>
-                </Link>
       
     </div>
   );
