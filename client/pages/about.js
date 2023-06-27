@@ -93,12 +93,13 @@ function AboutUs() {
           </ul>
         </div>
 
+
         <div className={styles.column}>
 
           <h3 id={styles.h3f}>Company</h3>
           <ul id={styles.ulf}>
             <li id={styles.lif}>
-              <a href="/index" id={styles.af}>Home</a>
+              <a href="/" id={styles.af}>Home</a>
             </li>
             <li id={styles.lif}> 
               <a href="/about" id={styles.af}>About Us</a>
