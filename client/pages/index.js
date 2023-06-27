@@ -2,6 +2,7 @@ import Link from 'next/link';
 import styles from './index.module.css';
 import { FaHome, FaPhone, FaEnvelope, FaFax } from 'react-icons/fa';
 
+
 function IndexPage() {
     return (
         <div>
@@ -27,6 +28,11 @@ function IndexPage() {
             </div>
           </nav>
 
+          <div >
+          <img className={styles.funny} src='./1.gif' alt='funny photo '/>
+          </div>
+
+
 
 
 
@@ -40,8 +46,6 @@ function IndexPage() {
                 tellus eget sapien mollis, eu efficitur orci aliquet.
               </p>
             </div>
-
-
             <div className={styles.column}>
               <h3 id={styles.h3f}>Support</h3>
               <ul id={styles.ulf}>
@@ -50,27 +54,24 @@ function IndexPage() {
                 <li id={styles.lif}>Published Research</li>
               </ul>
             </div>
-
             <div className={styles.column}>
 
-              <h3 id={styles.h3f}>Company</h3>
-              <ul id={styles.ulf}>
-                <li id={styles.lif}>
-                  <a href="/" id={styles.af}>Home</a>
-                </li>
-                <li id={styles.lif}> 
-                  <a href="/about" id={styles.af}>About Us</a>
-                </li>
-                <li id={styles.lif}>
-                  <a href="/contact" id={styles.af}>Contact Us</a>
-                </li>
+              <h3 id={styles.h3f}>Company</h3>  
+              <ul id={styles.ulf}>  
+                <li id={styles.lif}>  
+                  <a href="/" id={styles.af}>Home</a> 
+                </li> 
+                <li id={styles.lif}>  
+                  <a href="/about" id={styles.af}>About Us</a>  
+                </li> 
+                <li id={styles.lif}>  
+                  <a href="/contact" id={styles.af}>Contact Us</a>  
+                </li> 
                 <li id={styles.lif}>
                   <a href="/services" id={styles.af}>Services</a>
                 </li>
               </ul>
             </div>
-
-
             <div className={styles.column}>
               <h3 id={styles.h3f}>Contact Us</h3>
               <ul id={styles.ulf}>
@@ -91,7 +92,6 @@ function IndexPage() {
                   +123 456 7891
                 </li>
               </ul>
-
             </div>
           </footer>
           </div>

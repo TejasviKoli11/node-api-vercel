@@ -11,6 +11,7 @@
   "rootMainFiles": [],
   "pages": {
     "/": [
+<<<<<<< HEAD
       "static/chunks/webpack-8fa1640cc84ba8fe.js",
       "static/chunks/framework-eb07b5f28069193d.js",
       "static/chunks/main-0ac86b86adf2301e.js",
@@ -18,6 +19,11 @@
       "static/chunks/664-ec8047903255e9b8.js",
       "static/css/91df4389bf384200.css",
       "static/chunks/pages/index-4336aca1f0e0d11f.js"
+=======
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/index.js"
+>>>>>>> a20d98f9e2f50e7b30444f61e91818ccecfbf4d5
     ],
     "/_app": [
       "static/chunks/webpack-8fa1640cc84ba8fe.js",
@@ -26,6 +32,7 @@
       "static/chunks/pages/_app-aea6920bd27938ca.js"
     ],
     "/_error": [
+<<<<<<< HEAD
       "static/chunks/webpack-8fa1640cc84ba8fe.js",
       "static/chunks/framework-eb07b5f28069193d.js",
       "static/chunks/main-0ac86b86adf2301e.js",
@@ -96,6 +103,11 @@
       "static/chunks/664-ec8047903255e9b8.js",
       "static/css/d32ccef4e569e11c.css",
       "static/chunks/pages/uservents-a24d87fe927f0d9f.js"
+=======
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/_error.js"
+>>>>>>> a20d98f9e2f50e7b30444f61e91818ccecfbf4d5
     ]
   },
   "ampFirstPages": []
