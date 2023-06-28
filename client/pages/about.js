@@ -42,6 +42,7 @@ function AboutUs() {
         With more than 10 years of experience in the field, they have a 
         strong foundation in software development principles and practices.</p>
 
+      
         <p>This is our innovative website named Smart vents which connects
           the vents with app web application and give the all 
           information about vent status.

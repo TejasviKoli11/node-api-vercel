@@ -28,12 +28,28 @@ function IndexPage() {
             </div>
           </nav>
 
-          <div >
-          <img className={styles.funny} src='./1.gif' alt='funny photo '/>
-          </div>
 
-
-
+          <div class="container">
+          <img className={styles.photo} src='./familyPhoto.png' alt='family photo' stype="width:100%;"/>
+          <div class="text">Make your life easy, with our Smart vent application</div>
+          </div>  
+          
+          <div className="dashboard">
+      <div className="building">
+        <h2>Building Name</h2>
+        <img src="building_image.jpg" alt="Building" />
+      </div>
+      <div className="room">
+        <h3>Room Name</h3>
+        <img src="room_image.jpg" alt="Room" />
+      </div>
+      <div className="vent">
+        <h4>Vent Status</h4>
+        <div className="vent-icon">
+          <img src="vent_icon.jpg" alt="Vent" />
+        </div>
+      </div>
+    </div>
 
 
           <div>
