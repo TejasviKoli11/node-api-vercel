@@ -5,6 +5,7 @@ const userSchema = new Schema({
     username: {type:String,required:true,unique:true,lowercase:true},
     firstName: {type:String,required:true},
     lastName: {type:String,required:true},
+    password: {type:String,required:true},
     isVerified: {type:Boolean,required:true, default:false},
     lastLogin:{type:Date},
     email:{type:String,required:true},
@@ -19,6 +20,7 @@ const userSchema = new Schema({
     
 
 });
+
 
 //middleware
 userSchema.post('save',function(){

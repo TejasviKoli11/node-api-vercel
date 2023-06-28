@@ -7,11 +7,11 @@ const BuildingSchema = new Schema ({
     floors:{type:Number, required: true},
     rooms:[{
         type:mongoose.Schema.Types.ObjectId,
-        ref:'rooms'
+        ref:'room'
 }],
     owner:{
         type:mongoose.Schema.Types.ObjectId,
-        ref:'users'
+        ref:'User'
     }
 });
 
