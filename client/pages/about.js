@@ -42,8 +42,7 @@ function AboutUs() {
         With more than 10 years of experience in the field, they have a 
         strong foundation in software development principles and practices.</p>
 
-      <img src={require('client/pages/img/photo1.png')} />
-
+      
         <p>This is our innovative website named Smart vents which connects
           the vents with app web application and give the all 
           information about vent status.
@@ -95,12 +94,13 @@ function AboutUs() {
           </ul>
         </div>
 
+
         <div className={styles.column}>
 
           <h3 id={styles.h3f}>Company</h3>
           <ul id={styles.ulf}>
             <li id={styles.lif}>
-              <a href="/index" id={styles.af}>Home</a>
+              <a href="/" id={styles.af}>Home</a>
             </li>
             <li id={styles.lif}> 
               <a href="/about" id={styles.af}>About Us</a>

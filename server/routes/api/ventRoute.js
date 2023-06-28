@@ -14,10 +14,16 @@ app.get("/vents/:id", async (req,res)=>{
 });
 
 app.post("/vents", async (req,res)=>{
-    const vent = new ventModel(request.body);
-
+    const roomModel = require('../../models/room.js');
+    const vent = new ventModel(req.body);
+    const roomObj = await roomModel.findById(vent.room);
+    if(!roomObj){
+        throw Error('Room does not exist');
+    }
     try {
+        await roomObj.vents.push(vent._id);
         await vent.save();
+        await roomObj.save();
         res.send(vent);
     } catch (error) {
         res.status(500).send(error);

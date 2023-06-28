@@ -3,7 +3,6 @@ const { Schema, model} = mongoose;
 
 const roomSchema = new Schema ({
     name:{type:String,required:true},
-    roomId:{type:String, required:true},
     building:{
         type:mongoose.Schema.Types.ObjectId, 
         ref:"building",
@@ -23,5 +22,5 @@ const roomSchema = new Schema ({
 //middleware
 
 
-const room = model("room", roomSchema);
-module.export = room;
+const room = model('room', roomSchema);
+module.exports = room;

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import styles from './index.module.css';
 import { FaHome, FaPhone, FaEnvelope, FaFax } from 'react-icons/fa';
 
+
 function IndexPage() {
     return (
         <div>
@@ -28,6 +29,40 @@ function IndexPage() {
           </nav>
 
 
+          <div class="container">
+          <img className={styles.photo} src='./familyPhoto.png' alt='family photo' stype="width:100%;"/>
+          <div class="text">Make your life easy, with our Smart vent application</div>
+          </div>  
+          
+          <div className="dashboard">
+      <div className="building">
+        <h2>Building Name</h2>
+        <img src="building_image.jpg" alt="Building" />
+      </div>
+      <div className="room">
+        <h3>Room Name</h3>
+        <img src="room_image.jpg" alt="Room" />
+      </div>
+      <div className="vent">
+        <h4>Vent Status</h4>
+        <div className="vent-icon">
+          <img src="vent_icon.jpg" alt="Vent" />
+        </div>
+      </div>
+    </div>
+
+    <div className={styles.menu}>
+      
+            <Link href="./server/routes/api/BuildingRouting.js">
+            <p className={styles.button}> Building Routing </p>
+                </Link> 
+                <Link href="/RoomRoserver/routes/api/RoomRouting.js">
+                <p className={styles.button}> Room Routing </p> 
+                </Link> 
+                <Link href="/server/routes/api/RoomRouting.js">
+                <p className={styles.button}> Vent Data </p> 
+                </Link>
+            </div> 
 
 
           <div>
@@ -40,8 +75,6 @@ function IndexPage() {
                 tellus eget sapien mollis, eu efficitur orci aliquet.
               </p>
             </div>
-
-
             <div className={styles.column}>
               <h3 id={styles.h3f}>Support</h3>
               <ul id={styles.ulf}>
@@ -50,27 +83,24 @@ function IndexPage() {
                 <li id={styles.lif}>Published Research</li>
               </ul>
             </div>
-
             <div className={styles.column}>
 
-              <h3 id={styles.h3f}>Company</h3>
-              <ul id={styles.ulf}>
-                <li id={styles.lif}>
-                  <a href="/" id={styles.af}>Home</a>
-                </li>
-                <li id={styles.lif}> 
-                  <a href="/about" id={styles.af}>About Us</a>
-                </li>
-                <li id={styles.lif}>
-                  <a href="/contact" id={styles.af}>Contact Us</a>
-                </li>
+              <h3 id={styles.h3f}>Company</h3>  
+              <ul id={styles.ulf}>  
+                <li id={styles.lif}>  
+                  <a href="/" id={styles.af}>Home</a> 
+                </li> 
+                <li id={styles.lif}>  
+                  <a href="/about" id={styles.af}>About Us</a>  
+                </li> 
+                <li id={styles.lif}>  
+                  <a href="/contact" id={styles.af}>Contact Us</a>  
+                </li> 
                 <li id={styles.lif}>
                   <a href="/services" id={styles.af}>Services</a>
                 </li>
               </ul>
             </div>
-
-
             <div className={styles.column}>
               <h3 id={styles.h3f}>Contact Us</h3>
               <ul id={styles.ulf}>
@@ -91,7 +121,6 @@ function IndexPage() {
                   +123 456 7891
                 </li>
               </ul>
-
             </div>
           </footer>
           </div>
