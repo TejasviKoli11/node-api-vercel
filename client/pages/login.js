@@ -10,9 +10,9 @@ import axios from "axios";
 import React, {useState} from "react";
 //import { ReactDOM } from 'react-dom';
 
-const Login = ({setLoginUser})=> {
+
   const Login = ({setLoginUser}) => {
-    const history = useHistory()
+    //const history = useHistory()
       const [user,setUser] = useState({
         name:"",
         password:""
@@ -30,7 +30,7 @@ const Login = ({setLoginUser})=> {
         .then(res=>setLoginUser(res.data.user))
       }
   }
-}
+
 
 export default function LoginPage() {
 
@@ -122,7 +122,7 @@ export default function LoginPage() {
               {renderErrorMessage("pass")}
             </div>
             <div className={styles.buttoncontainer}>
-              <input type="button" onClick={login} value="Login"/>
+              <input type="button" onClick={handlechange} value="Login"/>
             </div>
           </form>
           <Link href="/forgotpass" className={styles.fgtpass}>
