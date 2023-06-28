@@ -21,6 +21,7 @@ router.get('/rooms', async (req, res) => {
 // Get a specific room by ID
 router.get('/rooms/:id', async (req, res) => {
   try {
+    
     const room = await Room.findById(req.params.id);
     if (!room) {
       return res.status(404).json({ error: 'Room not found.' });
@@ -36,7 +37,19 @@ router.get('/rooms/:id', async (req, res) => {
 // Create a new room
 router.post('/rooms', async (req, res) => {
   try {
+    const buildingModel = require('../../models/building.js');
     const room = new Room(req.body);
+    const buildingObj = buildingModel.findById(room.building);
+    //validates that the building exists
+    if(!buildingObj){
+      throw Error("Building does not exist");
+    }
+    //validates that the floor that the room is on isn't higher than the the buildings floors
+    if(room.floor>buildingObj.floors){
+      throw Error("Floor is greater than the number of floors that the building has");
+    }
+    //adds rooms to the buildings array
+    buildingObj.rooms.push(room._id);
     await room.save();
     res.status(201).json(room);
   } catch (error) {
