@@ -90,11 +90,14 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
+<<<<<<< HEAD
+=======
     ],
     "/login": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/login.js"
+>>>>>>> 839512ace37ecc181b6b3c5cd161fc1529479789
     ]
   },
   "ampFirstPages": []
