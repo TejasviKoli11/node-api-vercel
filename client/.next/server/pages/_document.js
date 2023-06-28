@@ -872,7 +872,6 @@ function prettyBytes(number, options) {
 
 /***/ }),
 
-<<<<<<< HEAD
 /***/ "./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?page=%2F_document&absolutePagePath=private-next-pages%2F_document&preferredRegion=&middlewareConfig=e30%3D!":
 /*!*********************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?page=%2F_document&absolutePagePath=private-next-pages%2F_document&preferredRegion=&middlewareConfig=e30%3D! ***!
@@ -937,9 +936,6 @@ module.exports = require("next/dist/server/future/route-modules/route-module.js"
 /*!*****************************************************!*\
   !*** external "next/dist/server/get-page-files.js" ***!
   \*****************************************************/
-=======
-/***/ 4140:
->>>>>>> bf923e4f809b1f599dfcd674928dce2c24606d2a
 /***/ ((module) => {
 
 module.exports = require("next/dist/server/get-page-files.js");
@@ -995,11 +991,7 @@ module.exports = require("react");
 var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-<<<<<<< HEAD
 var __webpack_exports__ = (__webpack_exec__("./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?page=%2F_document&absolutePagePath=private-next-pages%2F_document&preferredRegion=&middlewareConfig=e30%3D!"));
-=======
-var __webpack_exports__ = (__webpack_exec__(2940));
->>>>>>> bf923e4f809b1f599dfcd674928dce2c24606d2a
 module.exports = __webpack_exports__;
 
 })();
