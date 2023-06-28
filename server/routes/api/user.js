@@ -27,7 +27,7 @@ app.post("/user", async (req, res) => {
 });
 
 //Update Userbased on user id
-app.patch("/user/:id", async(req,res)=>{
+app.patch("/user", async(req,res)=>{
     const user = await userModel.findOne({email:req.body.email});
     if(user){
         user.firstName = req.body.firstName;
@@ -41,7 +41,7 @@ app.patch("/user/:id", async(req,res)=>{
 });
 
 //Deletes User based on user id
-app.delete("/user/:id", async(req,res)=>{
+app.delete("/user", async(req,res)=>{
     try{
         const user = await userModel.findByIdAndDelete(req.body.id).exec();
         res.send(user);
@@ -62,7 +62,7 @@ app.post("/login", async (req,res)=>{
             if(verifiedPass){
                 const token = jwt.sign({id:user._id}, process.env.SECRET);
                 res.cookie('token',token,{
-                    expires:new Date(Date.now()+(60*60*100)),
+                    expires:new Date(Date.now()+9000000),
                     httpOnly:true,
                     secure:true,
                 });
