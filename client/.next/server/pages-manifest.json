@@ -11,13 +11,6 @@
   "/technicianVentInfo": "pages/technicianVentInfo.html",
   "/uservents": "pages/uservents.html",
   "/_document": "pages/_document.js",
-<<<<<<< HEAD
-  "/login": "pages/login.js"
-=======
-<<<<<<< HEAD
   "/404": "pages/404.html"
-=======
-  "/": "pages/index.js"
->>>>>>> a20d98f9e2f50e7b30444f61e91818ccecfbf4d5
->>>>>>> bf923e4f809b1f599dfcd674928dce2c24606d2a
+
 }
