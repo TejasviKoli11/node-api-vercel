@@ -2,58 +2,26 @@ import React, { useState } from "react";
 import styles from './signup.module.css';
 import Link from 'next/link';
 import { FaHome, FaPhone, FaEnvelope, FaFax } from 'react-icons/fa';
+import { useSignup } from "../hooks/useSignUp";
+
 
 const SignUpPage = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setlastName] = useState("");
+  const [role, setRole] = useState(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submittedUsername, setSubmittedUsername] = useState("");
   const [submittedEmail, setSubmittedEmail] = useState("");
   const [errors, setErrors] = useState({});
-  const handleSubmit = (e) => {
+  const {signup,error,islaoding} = useSignup();
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Validate form fields
-    const formErrors = {};
-    if (username.trim() === "") {
-
-      formErrors.username = "Required field";
-
-    }
-    if (email.trim() === "") {
-
-      formErrors.email = "Required field";
-
-    }
-    if (password.trim() === "") {
-
-      formErrors.password = "Required field";
-
-    }
-    // Display errors if any, otherwise submit the form
-
-    if (Object.keys(formErrors).length > 0) {
-
-      setErrors(formErrors);
-
-    } else {
-
-      // Handle form submission (e.g., send data to backend)
-
-      console.log("Form submitted:", { username, email, password });
-      setIsSubmitted(true);
-      setSubmittedUsername(username);
-      setSubmittedEmail(email);
-
-      // Reset form fields and errors
-
-      setUsername("");
-      setEmail("");
-      setPassword("");
-      setErrors({});
-
-    }
-
+    await signup(username,firstName,lastName,email,password,role);
   };
 
   return (
@@ -96,9 +64,28 @@ const SignUpPage = () => {
           className={styles.input}
 
         />
-
         {errors.username && <span className={styles.error}>{errors.username}</span>}
 
+        <label htmlFor="firstName" className={styles.label}>First Name:</label>
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          value={firstName}
+          onChange={(e) => setFirstName(e.target.value)}
+          required
+          className={styles.input}
+        />
+        <label htmlFor="lastName" className={styles.label}>Last Name:</label>
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          value={lastName}
+          onChange={(e) => setlastName(e.target.value)}
+          required
+          className={styles.input}
+        />
         <label htmlFor="email" className={styles.label}>Email:</label>
         <input
           type="email"

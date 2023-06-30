@@ -10,9 +10,10 @@ import axios from "axios";
 import React, {useState} from "react";
 //import { ReactDOM } from 'react-dom';
 
-const Login = ({setLoginUser})=> {
+<<<<<<< HEAD
+
   const Login = ({setLoginUser}) => {
-    const history = useHistory()
+    //const history = useHistory()
       const [user,setUser] = useState({
         name:"",
         password:""
@@ -30,10 +31,33 @@ const Login = ({setLoginUser})=> {
         .then(res=>setLoginUser(res.data.user))
       }
   }
-}
+
+=======
+
+>>>>>>> 217dfd79cc2807119c6ee33c43d30698ba35d646
 
 export default function LoginPage() {
-
+  const Login = ({setLoginUser})=> {
+    const Login = ({setLoginUser}) => {
+      const history = useHistory()
+        const [user,setUser] = useState({
+          name:"",
+          password:""
+        })
+        const handleChange = e => {
+          const {name,value} = e.target
+          setUser({
+            ...user,
+            [name]:value
+          })
+        }
+  
+        const login = () =>{
+          axios.post("http://localhost:4000/login",user)
+          .then(res=>setLoginUser(res.data.user))
+        }
+    }
+  }
   
 
     //react states for checking
@@ -113,16 +137,16 @@ export default function LoginPage() {
           <form >
             <div className={styles.inputcontainer}>
               <label>Username </label>
-              <input type="text" name="uname" required class="username" className={styles.label}/>
+              <input type="text" name="uname" required class="username" onChange={(e)=>setUsername(e.target.value)}className={styles.label}/>
               {renderErrorMessage("uname")}
             </div>
             <div className={styles.inputcontainer}>
               <label>Password </label>
-              <input type="password" name="pass" required class="username" className={styles.label}/>
+              <input type="password" name="pass" onChange={(e)=>setPassword(e.target.value)} required class="username" className={styles.label}/>
               {renderErrorMessage("pass")}
             </div>
             <div className={styles.buttoncontainer}>
-              <input type="button" onClick={Login} value="Login"/>
+              <input type="button" onClick={login} value="Login"/>
             </div>
           </form>
           <Link href="/forgotpass" className={styles.fgtpass}>
