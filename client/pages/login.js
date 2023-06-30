@@ -122,7 +122,7 @@ export default function LoginPage() {
               {renderErrorMessage("pass")}
             </div>
             <div className={styles.buttoncontainer}>
-              <input type="button" onClick={login} value="Login"/>
+              <input type="button" onClick={Login} value="Login"/>
             </div>
           </form>
           <Link href="/forgotpass" className={styles.fgtpass}>
