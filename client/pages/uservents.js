@@ -6,6 +6,7 @@ import axios from 'axios';
 const HomePage = () => {
   const [roomData, setRoomData] = useState([]);
   const [buildingData, setBuildingData] = useState([]);
+  const [userData, setUserData] = useState([]);
 
   useEffect(() => {
     const fetchRoomData = async () => {
@@ -34,6 +35,21 @@ const HomePage = () => {
 
     fetchBuildingData();
   }, []);
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const response = await axios.get('http://localhost:4000/user');
+        const data = response.data;
+        setUserData(data);
+      } catch (error) {
+        console.error('Error fetching building data:', error);
+      }
+    };
+
+    fetchUserData();
+  }, []);
+
 
   return (
     <div>
@@ -71,6 +87,16 @@ const HomePage = () => {
           <li key={building._id}>
             <p>Name: {building.name}</p>
             <p>Floors: {building.floors}</p>
+          </li>
+        ))}
+      </ul>
+      <h1>User Data</h1>
+      <ul>
+        {userData.map((user) => (
+          <li key={user._id}>
+            <p>Name: {user.firstName}</p>
+            <p>Floors: {user.lastName}</p>
+            <p>Role: {user.role}</p>
           </li>
         ))}
       </ul>
