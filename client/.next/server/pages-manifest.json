@@ -11,15 +11,13 @@
   "/technicianVentInfo": "pages/technicianVentInfo.html",
   "/uservents": "pages/uservents.html",
   "/_document": "pages/_document.js",
-<<<<<<< HEAD
-  "/404": "pages/404.html"
 
-=======
-<<<<<<< HEAD
-  "/": "pages/index.js"
-=======
-<<<<<<< HEAD
-  "/login": "pages/login.js"
+  "/404": "pages/404.html",
+
+
+  "/": "pages/index.js",
+
+  "/login": "pages/login.js",
 =======
 <<<<<<< HEAD
   "/404": "pages/404.html"

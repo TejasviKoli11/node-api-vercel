@@ -757,8 +757,7 @@ Document[_constants.NEXT_BUILTIN_DOCUMENT] = InternalFunctionDocument; //# sourc
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
+
 /***/ 676:
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
@@ -874,11 +873,7 @@ function prettyBytes(number, options) {
 
 /***/ }),
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 839512ace37ecc181b6b3c5cd161fc1529479789
->>>>>>> 217dfd79cc2807119c6ee33c43d30698ba35d646
+
 /***/ "./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?page=%2F_document&absolutePagePath=private-next-pages%2F_document&preferredRegion=&middlewareConfig=e30%3D!":
 /*!*********************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?page=%2F_document&absolutePagePath=private-next-pages%2F_document&preferredRegion=&middlewareConfig=e30%3D! ***!
@@ -999,16 +994,11 @@ var __webpack_require__ = require("../webpack-runtime.js");
 __webpack_require__.C(exports);
 var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
 var __webpack_exports__ = (__webpack_exec__("./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?page=%2F_document&absolutePagePath=private-next-pages%2F_document&preferredRegion=&middlewareConfig=e30%3D!"));
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
+
 var __webpack_exports__ = (__webpack_exec__("./node_modules/next/dist/build/webpack/loaders/next-route-loader/index.js?page=%2F_document&absolutePagePath=private-next-pages%2F_document&preferredRegion=&middlewareConfig=e30%3D!"));
-=======
+
 var __webpack_exports__ = (__webpack_exec__(2940));
->>>>>>> bf923e4f809b1f599dfcd674928dce2c24606d2a
->>>>>>> 839512ace37ecc181b6b3c5cd161fc1529479789
->>>>>>> 217dfd79cc2807119c6ee33c43d30698ba35d646
+
 module.exports = __webpack_exports__;
 
 })();
