@@ -23,6 +23,24 @@ function Technican() {
       </nav>
 
       <p>This will be the technician vent info page and is under working</p>
+      import React from 'react';
+
+    <div>
+      <div style={{ backgroundColor: 'red', height: '200px' }}>
+        <h1>Div 1</h1>
+      </div>
+      <div style={{ backgroundColor: 'blue', height: '200px' }}>
+        <h1>Div 2</h1>
+      </div>
+      <div style={{ backgroundColor: 'green', height: '200px' }}>
+        <h1>Div 3</h1>
+      </div>
+      <div style={{ backgroundColor: 'yellow', height: '200px' }}>
+        <h1>Div 4</h1>
+      </div>
+    </div>
+
+export default HomePage;
 
       </div>
     );
