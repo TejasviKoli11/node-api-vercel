@@ -6,21 +6,13 @@ const Building = require('../../models/building.js');
 
 
 // Get all buildings
-routing.get('/buildings', async (req, res) => {
-  try {
-    const buildings = await Building.find();
-    res.json(buildings);
-  } catch (error) {
-    res.status(500).json({ error: 'An error occurred while retrieving the buildings.' });
-  }
-});
 
  
 
 // Get a specific building by ID
-routing.get('/buildings/:id', async (req, res) => {
+routing.get('/buildings', async (req, res) => {
   try {
-    const building = await Building.findById(req.params.id);
+    const building = await Building.find({owner:req.body.id});
     if (!building) {
       return res.status(404).json({ error: 'Building not found.' });
     }

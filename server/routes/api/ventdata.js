@@ -25,7 +25,7 @@ app.post("/ventData", async (req, res) =>{
     try{
         await ventData.save();
         response.send(ventData);
-    }catch{
+    }catch(error){
         res.status(500).send(error);
     }
 });

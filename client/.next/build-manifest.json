@@ -27,7 +27,7 @@
       "static/chunks/main.js",
       "static/chunks/pages/login.js"
     ],
-    "/signup": [
+    "/technicianVentInfo": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/signup.js"
