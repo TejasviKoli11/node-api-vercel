@@ -3,6 +3,8 @@ import styles from './signup.module.css';
 import Link from 'next/link';
 import { FaHome, FaPhone, FaEnvelope, FaFax } from 'react-icons/fa';
 import { useSignup } from "../hooks/useSignUp";
+import User from "../../server/models/user";
+import axios from "axios";
 
 
 const SignUpPage = () => {
@@ -111,7 +113,7 @@ const SignUpPage = () => {
         />
 
         {errors.password && <span className={styles.error}>{errors.password}</span>}
-        <input type="submit" value="Sign Up" className={styles.button} />
+        <input type="submit" value="Sign Up" className={styles.button} onClick={(e) => useSignup()} />
       </form>
 
 

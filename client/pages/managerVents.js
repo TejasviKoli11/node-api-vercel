@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import styles from './uservents.module.css';
 import axios from 'axios';
-
+``
 const HomePage = () => {
   const [roomData, setRoomData] = useState([]);
   const [buildingData, setBuildingData] = useState([]);
@@ -39,6 +39,7 @@ const HomePage = () => {
     fetchBuildingData();
   }, []);
 
+
   useEffect(() => {
     const fetchUserData = async () => {
       try {
@@ -53,6 +54,7 @@ const HomePage = () => {
     fetchUserData();
   }, []);
 
+    //AXIOS.PATCH INSTEAD OF AXIO.GET
   const handleSubmit = async (e) => {
     e.preventDefault();
 

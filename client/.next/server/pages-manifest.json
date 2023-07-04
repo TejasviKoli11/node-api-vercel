@@ -2,8 +2,42 @@
   "/_error": "pages/_error.js",
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
+<<<<<<< HEAD
   "/uservents": "pages/uservents.js",
   "/technicianVentInfo": "pages/technicianVentInfo.js",
   "/signup": "pages/signup.js",
   "/login": "pages/login.js"
+=======
+<<<<<<< HEAD
+  "/signup": "pages/signup.js",
+=======
+<<<<<<< HEAD
+  "/managerVents": "pages/managerVents.js",
+  "/login": "pages/login.js"
+=======
+<<<<<<< HEAD
+
+  "/404": "pages/404.html",
+
+
+  "/": "pages/index.js",
+
+  "/login": "pages/login.js",
+=======
+<<<<<<< HEAD
+  "/404": "pages/404.html"
+=======
+  "/": "pages/index.js"
+>>>>>>> a20d98f9e2f50e7b30444f61e91818ccecfbf4d5
+>>>>>>> bf923e4f809b1f599dfcd674928dce2c24606d2a
+>>>>>>> 839512ace37ecc181b6b3c5cd161fc1529479789
+>>>>>>> 217dfd79cc2807119c6ee33c43d30698ba35d646
+=======
+  "/technicianVentInfo": "pages/technicianVentInfo.js",
+  "/": "pages/index.js",
+>>>>>>> 3321db688cf6e89c82acf9dc1e8b7aa4d1373b01
+  "/login": "pages/login.js"
+>>>>>>> 201defbfa842a44bc4a45e10667336806ae28024
+>>>>>>> dbf6a679163a43a0fd562c7e6ef6c04aeb3bf7fc
+>>>>>>> 71dee910b7af769e2d2f55ed8a91350f2ec6d3f6
 }
