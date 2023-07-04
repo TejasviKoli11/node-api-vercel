@@ -7,12 +7,13 @@ const mongoose = require('mongoose');
 const express = require('express');
 const userModel = require('../../models/user.js');
 const building = require('../../models/building.js');
+const routing = express.Router();
 const app = express();
 const jwt = require('jsonwebtoken');
 const bcrypt =require('bcrypt');
 
 //Create new user
-app.post("/user", async (req, res) => {
+routing.post("/user", async (req, res) => {
    const existing = await userModel.findOne({email:req.body.email});
    if(!existing){
         const newUser = userModel(req.body);
@@ -21,13 +22,24 @@ app.post("/user", async (req, res) => {
         newUser.password = hashPass;
         newUser.save();
         res.send("user Created");
+        // res.json({
+        //     message: 'User Created',
+        //     body: {
+        //         //token: (Insert token name)
+        //         newUser() : (
+        //             id: user._id,
+        //             username: user.username,
+
+        //         ),
+        //     },
+        // });
         return;
    }
     res.send("Email already in use");
 });
 
 //Update Userbased on user id
-app.patch("/user", async(req,res)=>{
+routing.patch("/user", async(req,res)=>{
     const user = await userModel.findOne({email:req.body.email});
     if(user){
         user.firstName = req.body.firstName;
@@ -41,7 +53,7 @@ app.patch("/user", async(req,res)=>{
 });
 
 //Deletes User based on user id
-app.delete("/user", async(req,res)=>{
+routing.delete("/user", async(req,res)=>{
     try{
         const user = await userModel.findByIdAndDelete(req.body.id).exec();
         res.send(user);
@@ -50,7 +62,7 @@ app.delete("/user", async(req,res)=>{
     }
 });
 
-app.post("/login", async (req,res)=>{
+routing.post("/login", async (req,res)=>{
     const email = req.body.email;
     const password = req.body.password;
     console.log(email,password);
@@ -94,7 +106,7 @@ app.post("/login", async (req,res)=>{
     }
 });
 
-app.get("/userStuffs", async (req,res)=>{
+routing.get("/userStuffs", async (req,res)=>{
     const buildingModel = require("../../models/building.js");
     const roomModel = require("../../models/room.js");
     const ventModel = require("../../models/vents.js");
@@ -126,4 +138,4 @@ app.get("/userStuffs", async (req,res)=>{
     console.log(rooms[0]);
 });
 
-module.exports = app;
+module.exports = routing;
