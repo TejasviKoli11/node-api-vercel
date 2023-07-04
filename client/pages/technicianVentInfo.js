@@ -1,20 +1,36 @@
 import Link from 'next/link';
-import styles from './contact.module.css';
+import styles from './technicianVentInfo.module.css';
 import { FaHome, FaPhone, FaEnvelope, FaFax } from 'react-icons/fa';
+import React, { useEffect, useState } from 'react';
+
+function Technician() {
+
+  const [content, setContent] = useState('');
+
+  const handleLinkClick = () => {
+    window.location.href = '/uservents';
+    window.location.href = '/uservents';
+  };
+
+  // const loadPage = (pageUrl) => {
+  //   fetch(pageUrl)
+  //     .then(response => response.text())
+  //     .then(data => setContent(data))
+  //     .catch(error => console.log(error));
+  // };
 
 
-function Technican() {
     return (
-<div>
+<div className={styles.backgrd}>
       <nav className={styles.siteNavigation}>
         <div className={styles.logo}>
           <Link href="/">
-              <button className={styles.logoButton}>Smart Vents</button>
+              <button className={styles.logoButton}>Smart Vents Technician page</button>
           </Link>
         </div>
         <div className={styles.menu}>
         <Link href="/login">
-        <p className={styles.button}> Login </p>
+            <p className={styles.button}> Login </p>
             </Link>
             <Link href="/signup">
             <p className={styles.button}> Sign Up </p>
@@ -23,27 +39,33 @@ function Technican() {
       </nav>
 
       <p>This will be the technician vent info page and is under working</p>
-      
 
-    <div>
-      <div style={{ backgroundColor: 'red', height: '200px' }}>
+    <div className={styles.diffdivs}>
+      <div className={styles.itemdiv1} >
         <h1>Div 1</h1>
+        <nav className={styles.siteNavigation}>
+            <div className={styles.container}>
+            <Link href="/uservents" >
+              <a onClick={handleLinkClick}></a>
+            <p className={styles.buttonIN}> View Building </p>
+            </Link>
+            <Link href="/uservents" >
+              <a onClick={handleLinkClick}></a>
+            <p className={styles.buttonIN}> Add Building </p>
+            </Link>
+            <Link href="/uservents" >
+              <a onClick={handleLinkClick}></a>
+              <p className={styles.buttonIN}> Add room </p>
+            </Link>
+            </div>
+        </nav>
       </div>
-      <div style={{ backgroundColor: 'blue', height: '200px' }}>
+      <div className={styles.itemdiv2} >
         <h1>Div 2</h1>
       </div>
-      <div style={{ backgroundColor: 'green', height: '200px' }}>
-        <h1>Div 3</h1>
-      </div>
-      <div style={{ backgroundColor: 'yellow', height: '200px' }}>
-        <h1>Div 4</h1>
-      </div>
     </div>
-
-export default HomePage;
-
-      </div>
-    );
+  </div>
+    );  
   }
   
-  export default Technican;
+  export default Technician;
