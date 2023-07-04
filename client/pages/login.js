@@ -133,12 +133,12 @@ export default function LoginPage() {
           <form >
             <div className={styles.inputcontainer}>
               <label>Username </label>
-              <input type="text" name="uname" required class="username" onChange={(e)=>setUsername(e.target.value)}className={styles.label}/>
+              <input type="text" name="uname" required class="username" onChange={(e)=>setUser(e.target.value)}className={styles.label}/>
               {renderErrorMessage("uname")}
             </div>
             <div className={styles.inputcontainer}>
               <label>Password </label>
-              <input type="password" name="pass" onChange={(e)=>setPassword(e.target.value)} required class="username" className={styles.label}/>
+              <input type="password" name="pass" onChange={(e)=>setUser(e.target.value)} required class="username" className={styles.label}/>
               {renderErrorMessage("pass")}
             </div>
             <div className={styles.buttoncontainer}>
