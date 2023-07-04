@@ -9,6 +9,12 @@ export default function LoginPage() {
   const [isSubmitted, setSubmitted] = useState(false);
   const router = useRouter();
 
+  const login = () => {
+    axios.post("http://localhost:4000/login", user)
+      .then(res => setLoginUser(res.data.user))
+      .catch(error => console.error(error));
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
 

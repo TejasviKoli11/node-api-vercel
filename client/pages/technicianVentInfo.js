@@ -23,7 +23,7 @@ function Technican() {
       </nav>
 
       <p>This will be the technician vent info page and is under working</p>
-      import React from 'react';
+      
 
     <div>
       <div style={{ backgroundColor: 'red', height: '200px' }}>
