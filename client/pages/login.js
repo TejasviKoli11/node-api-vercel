@@ -10,7 +10,6 @@ import axios from "axios";
 import React, {useState} from "react";
 //import { ReactDOM } from 'react-dom';
 
-<<<<<<< HEAD
 
   const Login = ({setLoginUser}) => {
     //const history = useHistory()
@@ -32,9 +31,6 @@ import React, {useState} from "react";
       }
   }
 
-=======
-
->>>>>>> 217dfd79cc2807119c6ee33c43d30698ba35d646
 
 export default function LoginPage() {
   const Login = ({setLoginUser})=> {
@@ -146,7 +142,7 @@ export default function LoginPage() {
               {renderErrorMessage("pass")}
             </div>
             <div className={styles.buttoncontainer}>
-              <input type="button" onClick={login} value="Login"/>
+              <input type="button" onClick={Login} value="Login"/>
             </div>
           </form>
           <Link href="/forgotpass" className={styles.fgtpass}>
