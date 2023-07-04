@@ -1,0 +1,179 @@
+.background{
+    background-color: #2B6864
+}
+.dashboarditem {
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f2f2f2;
+  }  
+  .profile-icon img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  .search-bar input {
+ width: 200px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+  }
+  .login-logout-icons img {
+
+    width: 20px;
+
+    height: 20px;
+
+    margin-left: 10px;
+
+  }
+
+ 
+
+  .login-logout-icons img:hover {
+
+    cursor: pointer;
+
+    opacity: 0.7;
+
+  }
+
+ 
+
+  .dashboarditem1 {
+
+    background-color: #f2f2f2;
+
+    border: 1px solid #ccc;
+
+    padding: 20px;
+
+    margin-bottom: 10px;
+
+  }
+
+
+
+
+  /* styles/dashboard.css */
+
+.container {
+
+    display: flex;
+
+  }
+
+ 
+
+  .sidebar {
+
+    background: #f1f1f1;
+
+    width: 200px;
+
+  }
+
+ 
+
+  .sidebar ul {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 0;
+
+  }
+
+ 
+
+  .sidebar ul li {
+
+    margin-bottom: 10px;
+
+  }
+
+ 
+
+  .sidebar ul li a {
+
+    display: block;
+
+    color: #333;
+
+    text-decoration: none;
+
+    padding: 10px;
+
+  }
+
+ 
+
+  .sidebar ul li a:hover {
+
+    background: #ddd;
+
+  }
+
+ 
+
+  .main-content {
+
+    flex-grow: 1;
+
+    padding: 20px;
+
+  }
+
+ 
+
+
+
+
+  .dashboarditem2 {
+
+    background-color: #f2f2f2;
+
+    border: 1px solid #ccc;
+
+    padding: 20px;
+
+    margin-bottom: 10px;
+
+  }
+
+
+
+
+  .dashboarditem3 {
+
+    background-color: #f2f2f2;
+
+    border: 1px solid #ccc;
+
+    padding: 20px;
+
+    margin-bottom: 10px;
+
+  }
+
+
+
+
+  .dashboarditem4 {
+
+    background-color: #f2f2f2;
+
+    border: 1px solid #ccc;
+
+    padding: 20px;
+
+    margin-bottom: 10px;
+
+  }

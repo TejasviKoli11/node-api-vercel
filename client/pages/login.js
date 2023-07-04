@@ -1,39 +1,8 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
-<<<<<<< HEAD
-
-//import React from 'react'
-
-//import react functions for checking the states, if the form is submitted and printing error message
-import React, {useState} from "react";
-//import { ReactDOM } from 'react-dom';
-
-
-  const Login = ({setLoginUser}) => {
-    //const history = useHistory()
-      const [user,setUser] = useState({
-        name:"",
-        password:""
-      })
-      const handleChange = e => {
-        const {name,value} = e.target
-        setUser({
-          ...user,
-          [name]:value
-        })
-      }
-
-      const login = () =>{
-        axios.post("http://localhost:4000/login",user)
-        .then(res=>setLoginUser(res.data.user))
-      }
-  }
-
-=======
 import Link from "next/link";
 import styles from "./login.module.css";
->>>>>>> dbf6a679163a43a0fd562c7e6ef6c04aeb3bf7fc
 
 export default function LoginPage() {
   const [errorMessage, setErrorMessage] = useState({});
@@ -78,76 +47,6 @@ export default function LoginPage() {
         } else {
           router.push("/technicianVentInfo");
         }
-<<<<<<< HEAD
-      };
-    
-      //  code for error message
-      const renderErrorMessage = (name) =>
-        name === errorMessage.name && (
-          <div className={styles.error}>{errorMessage.message}</div>
-        );
-    
-      //code for login form
-      const renderForm = (
-        <div>
-        <div className={styles.form}> 
-          <form >
-            <div className={styles.inputcontainer}>
-              <label>Username </label>
-              <input type="text" name="uname" required class="username" onChange={(e)=>setUser(e.target.value)}className={styles.label}/>
-              {renderErrorMessage("uname")}
-            </div>
-            <div className={styles.inputcontainer}>
-              <label>Password </label>
-              <input type="password" name="pass" onChange={(e)=>setUser(e.target.value)} required class="username" className={styles.label}/>
-              {renderErrorMessage("pass")}
-            </div>
-            <div className={styles.buttoncontainer}>
-              <input type="button" onClick={Login} value="Login"/>
-            </div>
-          </form>
-          <Link href="/forgotpass" className={styles.fgtpass}>
-            Forgot Password?
-          </Link>
-        </div> 
-        </div>
-      );
-    
-      return (
-        <div>
-        <nav className={styles.siteNavigation}>
-          <div className={styles.logo}>
-            <Link href="/">
-                <button className={styles.logoButton}>Smart Vents</button>
-            </Link>
-          </div>
-          <div className={styles.menu}>
-              <Link href="/">
-              <p className={styles.button}> Home </p>
-              </Link>
-              <Link href="/signup">
-              <p className={styles.button}> Sign Up </p>
-              </Link>
-              <Link href="/contact">
-              <p className={styles.button}> Conatct Us </p>
-              </Link>
-              <Link href="/about">
-              <p className={styles.button}> About Us </p>
-              </Link>
-          </div>
-        </nav>
-        <div className={styles.app}>
-          <div className={styles.loginform}>
-            <div className={styles.title}>Login</div>
-            {isSubmitted ? (
-            <div>
-            <div>User is successfully logged in</div>
-            </div>
-            ): (renderForm)}
-          </div>
-        </div>
-    </div>
-=======
       }
     } else {
       setErrorMessage({ name: "uname", message: "Invalid username" });
@@ -157,7 +56,6 @@ export default function LoginPage() {
   const renderErrorMessage = (name) =>
     name === errorMessage.name && (
       <div className={styles.error}>{errorMessage.message}</div>
->>>>>>> dbf6a679163a43a0fd562c7e6ef6c04aeb3bf7fc
     );
 
   const renderForm = (

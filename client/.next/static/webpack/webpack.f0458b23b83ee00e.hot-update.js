@@ -9,18 +9,6 @@
  */
 self["webpackHotUpdate_N_E"]("webpack",{},
 /******/ function(__webpack_require__) { // webpackRuntimeModules
-/******/ /* webpack/runtime/compat get default export */
-/******/ !function() {
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function() { return module['default']; } :
-/******/ 			function() { return module; };
-/******/ 		__webpack_require__.d(getter, { a: getter });
-/******/ 		return getter;
-/******/ 	};
-/******/ }();
-/******/ 
 /******/ /* webpack/runtime/define property getters */
 /******/ !function() {
 /******/ 	// define getter functions for harmony exports
@@ -35,11 +23,7 @@ self["webpackHotUpdate_N_E"]("webpack",{},
 /******/ 
 /******/ /* webpack/runtime/getFullHash */
 /******/ !function() {
-<<<<<<< HEAD
-/******/ 	__webpack_require__.h = function() { return "d21ec433a1e50d60"; }
-=======
-/******/ 	__webpack_require__.h = function() { return "fce25760dc6ad7e2"; }
->>>>>>> 71dee910b7af769e2d2f55ed8a91350f2ec6d3f6
+/******/ 	__webpack_require__.h = function() { return "a8646124daec099a"; }
 /******/ }();
 /******/ 
 /******/ /* webpack/runtime/global */
@@ -86,11 +70,6 @@ self["webpackHotUpdate_N_E"]("webpack",{},
 /******/ 		};
 /******/ 	};
 /******/ }
-/******/ 
-/******/ /* webpack/runtime/nonce */
-/******/ !function() {
-/******/ 	__webpack_require__.nc = undefined;
-/******/ }();
 /******/ 
 /******/ }
 );

@@ -22,29 +22,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
+    "/dashboard": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/dashboard.js"
+    ],
     "/login": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/login.js"
-    ],
-    "/signup": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/signup.js"
-    ],
-    "/technicianVentInfo": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-<<<<<<< HEAD
-      "static/chunks/pages/technicianVentInfo.js"
-    ],
-    "/uservents": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/uservents.js"
-=======
-      "static/chunks/pages/signup.js"
->>>>>>> 71dee910b7af769e2d2f55ed8a91350f2ec6d3f6
     ]
   },
   "ampFirstPages": []
