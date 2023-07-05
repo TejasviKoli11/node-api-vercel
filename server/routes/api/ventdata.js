@@ -8,10 +8,11 @@ const ventDataModel = require("../../models/ventdata.js");
 const app = express();
 
 //Retrieves a vent data object
-app.get("/ventData/:owner", async (req, res) =>{
+app.get("/ventData", async (req, res) =>{
     //this needs to validated, passing user's id
-    const ventData = await ventDataModel.find({owner: req.params.user.id});
-
+    const ventData = await ventDataModel.find({userId: req.body.id});
+    console.log(req.params.id);
+    console.log(ventData);
     try{
         res.send(ventData);
     }catch (error){
