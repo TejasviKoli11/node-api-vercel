@@ -2,8 +2,5 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/_app": "pages/_app.js",
-  "/": "pages/index.js",
-  "/technicianVentInfo": "pages/technicianVentInfo.js",
-  "/login": "pages/login.js",
-  "/uservents": "pages/uservents.js"
+  "/technicianVentInfo": "pages/technicianVentInfo.js"
 }
