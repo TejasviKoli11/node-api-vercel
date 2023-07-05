@@ -6,7 +6,6 @@ const Dashboard = () => {
     <div className="dashboard">
       {/* Your dashboard content */}
       
-      <Link to="/signup" className="signup-link">Sign Up</Link>
     </div>
   );
 };

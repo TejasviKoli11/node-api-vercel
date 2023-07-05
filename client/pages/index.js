@@ -14,7 +14,6 @@ function IndexPage() {
         <div className={styles.menu}>
           <Link href="/login">
             <p className={styles.button}> Login </p>
-<<<<<<< HEAD
                 </Link>
                 <Link href="/signup">
                 <p className={styles.button}> Sign Up </p>
@@ -47,22 +46,9 @@ function IndexPage() {
         <h4>Vent Status</h4>
         <div className="vent-icon">
           <img src="vent_icon.jpg" alt="Vent" />
-=======
-          </Link>
-          <Link href="/signup">
-            <p className={styles.button}> Sign Up </p>
-          </Link>
-          <Link href="/contact">
-            <p className={styles.button}> Contact Us </p>
-          </Link>
-          <Link href="/about">
-            <p className={styles.button}> About Us </p>
-          </Link>
->>>>>>> dbf6a679163a43a0fd562c7e6ef6c04aeb3bf7fc
         </div>
       </nav>
 
-<<<<<<< HEAD
 
           <div>
                 <footer className={styles.footer}>
@@ -122,26 +108,6 @@ function IndexPage() {
               </ul>
             </div>
           </footer>
-=======
-      <div className="container">
-        <img className={styles.photo} src='./familyPhoto.png' alt='family photo' style={{ width: "100%" }} />
-        <div className="text">Make your life easy, with our Smart vent application</div>
-      </div>
-
-      <div className="dashboard">
-        <div className="building">
-          <h2>Building Name</h2>
-          <img src="building_image.jpg" alt="Building" />
-        </div>
-        <div className="room">
-          <h3>Room Name</h3>
-          <img src="room_image.jpg" alt="Room" />
-        </div>
-        <div className="vent">
-          <h4>Vent Status</h4>
-          <div className="vent-icon">
-            <img src="vent_icon.jpg" alt="Vent" />
->>>>>>> dbf6a679163a43a0fd562c7e6ef6c04aeb3bf7fc
           </div>
         </div>
       </div>
