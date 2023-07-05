@@ -28,7 +28,9 @@ function IndexPage() {
           </Link>
         </div>
       </nav>
- 
+
+<<<<<<< HEAD
+=======
       <div className="container">
         <img className={styles.photo} src='./familyPhoto.png' alt='family photo' style={{ width: "100%" }} />
         <div className="text">Make your life easy, with our Smart vent application</div>
@@ -63,6 +65,7 @@ function IndexPage() {
         </Link>
       </div>
 
+>>>>>>> ed2b70cb54043d8b5c68b34b2c802534af076aec
       <div className="container">
         <img className={styles.photo} src='./familyPhoto.png' alt='family photo' style={{ width: "100%" }} />
         <div className="text">Make your life easy, with our Smart vent application</div>

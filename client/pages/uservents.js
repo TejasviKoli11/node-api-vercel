@@ -5,8 +5,21 @@ import axios from 'axios';
 
 const HomePage = () => {
   const [roomData, setRoomData] = useState([]);
-  const [buildingData, setBuildingData] = useState([]);
-  const [userData, setUserData] = useState([]);
+   const [ventData, setVentData] = useState([]);
+
+  useEffect(() => {
+    const fetchVentData = async () => {
+      try {
+        const response = await axios.get('http://localhost:4000/ventData',{body:{id:'5d498f88977f79116410691c'}});
+        const data = response.data;
+        setVentData(data);
+      } catch (error) {
+        console.error('Error fetching vent data:', error);
+      }
+    };
+
+    fetchVentData();
+  }, []);
 
   useEffect(() => {
     const fetchRoomData = async () => {
@@ -22,33 +35,7 @@ const HomePage = () => {
     fetchRoomData();
   }, []);
 
-  useEffect(() => {
-    const fetchBuildingData = async () => {
-      try {
-        const response = await axios.get('http://localhost:4000/buildings');
-        const data = response.data;
-        setBuildingData(data);
-      } catch (error) {
-        console.error('Error fetching building data:', error);
-      }
-    };
 
-    fetchBuildingData();
-  }, []);
-
-  useEffect(() => {
-    const fetchUserData = async () => {
-      try {
-        const response = await axios.get('http://localhost:4000/user');
-        const data = response.data;
-        setUserData(data);
-      } catch (error) {
-        console.error('Error fetching building data:', error);
-      }
-    };
-
-    fetchUserData();
-  }, []);
 
 
   return (
@@ -79,28 +66,27 @@ const HomePage = () => {
             <p>Floor: {room.floor}</p>
           </li>
         ))}
+      </ul>   
+
+      <h1>Vent Data</h1>
+      <ul>
+        {ventData.map((data) => (
+          <li key={data._id}>
+            <p>Batch No: {data.batchNo}</p>
+            <p>Complete: {data.complete}</p>
+            <p>Format Code: {data.formatCode}</p>
+            <p>Deleted: {data.deleted}</p>
+            <p>Device ID: {data.deviceID}</p>
+            <p>Schedule Enabled: {data.scheduleEn}</p>
+            <p>Samples Count: {data.samplesCnt}</p>
+            <p>Start Date: {data.startDate}</p>
+            <p>Temperature Interval: {data.tempIntrv}</p>
+            <p>Voltage Interval: {data.voltIntrv}</p>
+            <p>User ID: {data.userId}</p>
+          </li>
+        ))}
       </ul>
 
-      <h1>Building Data</h1>
-      <ul>
-        {buildingData.map((building) => (
-          <li key={building._id}>
-            <p>Name: {building.name}</p>
-            <p>Floors: {building.floors}</p>
-          </li>
-        ))}
-      </ul>
-      <h1>User Data</h1>
-      <ul>
-        {userData.map((user) => (
-          <li key={user._id}>
-            <p>Name: {user.firstName}</p>
-            <p>Floors: {user.lastName}</p>
-            <p>Role: {user.role}</p>
-          </li>
-        ))}
-      </ul>
-      
     </div>
   );
 };
