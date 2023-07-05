@@ -3,6 +3,8 @@ import styles from './signup.module.css';
 import Link from 'next/link';
 import { FaHome, FaPhone, FaEnvelope, FaFax } from 'react-icons/fa';
 import { useSignup } from "../hooks/useSignUp";
+import User from "../../server/models/user";
+import axios from "axios";
 
 
 const SignUpPage = () => {
@@ -25,6 +27,8 @@ const SignUpPage = () => {
   };
 
   return (
+
+    //navigation bar code
 <div>
     <nav className={styles.siteNavigation}>
     <div className={styles.logo}>
@@ -50,6 +54,14 @@ const SignUpPage = () => {
 
 
     <div className={styles.background}>
+    <div className={styles.addimage}>
+    <img src="ventImage.png" alt="ventImage"/>
+      <div className={styles.addTextonImage}>
+        <p>
+          Less pollution, less radiation, healthier home
+        </p>
+      </div>
+      </div>
     <div className={styles.container}>
       <h1 className={styles.title}>Sign Up</h1>
       <form className={styles.form} onSubmit={handleSubmit}>
@@ -111,11 +123,8 @@ const SignUpPage = () => {
         />
 
         {errors.password && <span className={styles.error}>{errors.password}</span>}
-        <input type="submit" value="Sign Up" className={styles.button} />
+        <input type="submit" value="Sign Up" className={styles.button} onClick={(e) => useSignup()} />
       </form>
-
-
-
 
       {isSubmitted && (
         <div className={styles.successMessage}>
@@ -128,7 +137,7 @@ const SignUpPage = () => {
     </div>
     </div>
 
-
+  
     <div>
                 <footer className={styles.footer}>
             <div className={styles.column}>
@@ -139,8 +148,6 @@ const SignUpPage = () => {
                 tellus eget sapien mollis, eu efficitur orci aliquet.
               </p>
             </div>
-
-
             <div className={styles.column}>
               <h3 id={styles.h3f}>Support</h3>
               <ul id={styles.ulf}>

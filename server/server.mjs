@@ -21,7 +21,7 @@ app.use(express.json());
 app.get('/', (req,res)=>{
     res.json({mssg:'We are live PEOPLE!'})
 })
-//Routes
+//Routes - 
 app.use(ventScedRoute);
 app.use(ventDataRoute);
 app.use(buildingRoute);
