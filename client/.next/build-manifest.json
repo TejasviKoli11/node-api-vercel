@@ -32,15 +32,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/login.js"
     ],
-    "/signup": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/signup.js"
-    ],
     "/technicianVentInfo": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/technicianVentInfo.js"
+    ],
+    "/uservents": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/uservents.js"
     ]
   },
   "ampFirstPages": []

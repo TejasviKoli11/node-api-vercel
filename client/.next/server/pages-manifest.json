@@ -1,9 +1,9 @@
 {
-  "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/signup": "pages/signup.js",
-  "/technicianVentInfo": "pages/technicianVentInfo.js",
+  "/_app": "pages/_app.js",
   "/": "pages/index.js",
-  "/login": "pages/login.js"
+  "/technicianVentInfo": "pages/technicianVentInfo.js",
+  "/login": "pages/login.js",
+  "/uservents": "pages/uservents.js"
 }

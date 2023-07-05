@@ -123,7 +123,7 @@ const SignUpPage = () => {
         />
 
         {errors.password && <span className={styles.error}>{errors.password}</span>}
-        <input type="submit" value="Sign Up" className={styles.button} onClick={(e) => useSignup()} />
+        <input type="submit" value="Sign Up" className={styles.subbutton} onClick={(e) => useSignup()} />
       </form>
 
       {isSubmitted && (
