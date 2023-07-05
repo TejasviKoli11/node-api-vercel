@@ -28,7 +28,7 @@ function IndexPage() {
           </Link>
         </div>
       </nav>
-
+ 
       <div className="container">
         <img className={styles.photo} src='./familyPhoto.png' alt='family photo' style={{ width: "100%" }} />
         <div className="text">Make your life easy, with our Smart vent application</div>

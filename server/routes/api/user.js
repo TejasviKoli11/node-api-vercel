@@ -137,5 +137,5 @@ routing.get("/userStuffs", async (req,res)=>{
     res.send(buildings);
     console.log(rooms[0]);
 });
-
+ 
 module.exports = routing;

@@ -75,7 +75,7 @@ const SignUpPage = () => {
           required
           className={styles.input}
 
-        />
+        /> 
         {errors.username && <span className={styles.error}>{errors.username}</span>}
 
         <label htmlFor="firstName" className={styles.label}>First Name:</label>

@@ -27,5 +27,5 @@ export const useSignup = () => {
             setIsLoading(false)
         }
     }
-    return {signup};
+    return {signup}; 
 }
