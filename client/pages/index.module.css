@@ -153,3 +153,74 @@ width: 700px;
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.main {
+  margin-left: 600px;
+}
+
+
+.main2{
+  margin-left: 500px;
+
+}
+
+.main3{
+  margin-left: 50px;
+  margin-right: 50px;
+  
+}
+
+.welcome{
+  color: white;
+}
+
+.main4{
+  justify-content: center;
+  color: white;
+  line-height: 2;
+}
+
+.venticon{
+  float: left;
+  margin-left: 40px;
+  display: flex;
+  margin-top: 40px;
+  
+}
+
+.venticon img{
+  display: block;
+}
+
+.venticon p{
+  padding: 20px;
+  line-height: 2;
+  color: white;
+  
+}
+
+.mainn{
+  background-color: #bbb2b2;
+  height: 500px; 
+  
+  
+} 
+
+.app{
+  float: right;
+  margin-left: 40px;
+  display: flex;
+  
+}
+
+.app img{
+  display: block;
+}
+
+.app p{
+  padding: 20px;
+  line-height: 2;
+  color: black; 
+  background-color: antiquewhite;
+}
+

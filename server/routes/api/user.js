@@ -88,12 +88,12 @@ routing.post("/login", async (req,res)=>{
                             role:user.role,
                             firstName:user.firstName,
                             lastName:user.lastName,
-
                         }
                     }
                 })
                 return;
-            }else{
+            }
+            else{
                 res.send({message:"wrong"});
                 return;
             }

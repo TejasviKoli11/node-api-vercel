@@ -130,8 +130,11 @@ const SignUpPage = () => {
 
     </div>
     </div>
+<<<<<<< HEAD
+=======
 
   
+>>>>>>> bcf069c950cab71f9c2771561ef9ab410d977fa4
     <div>
 
           <footer className={styles.footer}>

@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import styles from './uservents.module.css';
+
 import axios from 'axios';
 
 const HomePage = () => {
   const [roomData, setRoomData] = useState([]);
+<<<<<<< HEAD
+=======
   const [buildingData, setBuildingData] = useState([]);
   const [userData, setUserData] = useState([]);
 
@@ -12,6 +15,7 @@ const HomePage = () => {
     window.location.href = '/uservents';
     window.location.href = '/uservents';
   };
+>>>>>>> b62f3d74456cf8e17e1019c49c99c906e06baac5
 
   useEffect(() => {
     const fetchRoomData = async () => {
@@ -33,6 +37,8 @@ const HomePage = () => {
         //const response = 
         await axios.post('http://localhost:4000/buildings',{id: "6492739d625cd683ff5a98f7"}).then((response)=>{
 
+<<<<<<< HEAD
+=======
       console.log(response.data);
         var data=response.data;
         setBuildingData(data);
@@ -84,9 +90,9 @@ const HomePage = () => {
   // };
 
 
+>>>>>>> b62f3d74456cf8e17e1019c49c99c906e06baac5
   return (
     <div>
-
 
 <nav className={styles.siteNavigation}>
             <div className={styles.logo}>
@@ -123,6 +129,47 @@ const HomePage = () => {
     )}
   </tbody>
 </table>
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+
+=======
+{/* adding room code */}
+{/* <h1>Add a Room</h1>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Name:
+          <input
+            type="text"
+            name="name"
+            value={newRoom.name}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Building:
+          <input
+            type="text"
+            name="building"
+            value={newRoom.building}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Floor:
+          <input
+            type="number"
+            name="floor"
+            value={newRoom.floor}
+            onChange={handleChange}
+          />
+        </label>
+        <button type="submit">Add Room</button>
+      </form>
+    
+  ); */}
+>>>>>>> cab2d32d2c12a1942d38c0b093bc27be8b3b5dd9
       <h1>Building Data</h1>
       <ul>
         {buildingData.map((building) => (
@@ -143,9 +190,11 @@ const HomePage = () => {
         ))}
       </ul>
       
+>>>>>>> b62f3d74456cf8e17e1019c49c99c906e06baac5
     </div>
   );
 };
 
-
 export default HomePage;
+
+

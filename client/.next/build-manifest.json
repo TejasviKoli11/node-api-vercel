@@ -12,6 +12,11 @@
   ],
   "rootMainFiles": [],
   "pages": {
+    "/": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/index.js"
+    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -21,11 +26,14 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
+<<<<<<< HEAD
     ],
     "/addBuilding": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/addBuilding.js"
+=======
+>>>>>>> cab2d32d2c12a1942d38c0b093bc27be8b3b5dd9
     ]
   },
   "ampFirstPages": []

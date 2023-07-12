@@ -4,8 +4,29 @@ import axios from "axios";
 const useLogin = () => {
  // const [isSubmitted, setSubmitted] = useState(false);
 
+<<<<<<< HEAD
   const login = async (username, password) => {
     try {
+=======
+  const login = async (email, password) => {
+    try {
+<<<<<<< HEAD
+      const response = await axios.post("/login", {
+        email: email,
+        password: password,
+      });
+
+      const { message, body } = response.data;
+
+      if (message === "logged in") {
+        setSubmitted(true);
+        if (body.user.role === "technician") {
+            router.push("/uservents");
+          } else {
+            router.push("/technicianVentInfo");
+          }
+=======
+>>>>>>> bcf069c950cab71f9c2771561ef9ab410d977fa4
       console.log(username, password);
       axios.post('http://localhost:4000/login',{
         email: username,
@@ -18,6 +39,7 @@ const useLogin = () => {
             router.push("/dashboard");
         } else {
           //setErrorMessage({ name: "login", message: message });
+>>>>>>> b62f3d74456cf8e17e1019c49c99c906e06baac5
         }
       }, (error) =>{
         console.log(error);
@@ -35,3 +57,10 @@ const useLogin = () => {
 
 export default useLogin;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> da18f363380b778ad6235abf53d3c6a97c07c92b
+>>>>>>> bcf069c950cab71f9c2771561ef9ab410d977fa4
+>>>>>>> cab2d32d2c12a1942d38c0b093bc27be8b3b5dd9
