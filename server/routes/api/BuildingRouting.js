@@ -26,7 +26,11 @@ routing.post('/buildings', async (req, res) => {
  
 
 // Create a new building
+<<<<<<< HEAD
 routing.post('/buildingsnew', async (req, res) => {
+=======
+routing.post('/buildingsNew', async (req, res) => {
+>>>>>>> 21d6163d39e14b5032122671f3b0a208b8e9e350
   try {
     const userModel = require('../../models/user.js');
     

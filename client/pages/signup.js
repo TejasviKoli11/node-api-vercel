@@ -3,8 +3,7 @@ import styles from './signup.module.css';
 import Link from 'next/link';
 import { FaHome, FaPhone, FaEnvelope, FaFax } from 'react-icons/fa';
 import { useSignup } from "../hooks/useSignUp";
-import User from "../../server/models/user";
-import axios from "axios";
+
 
 
 const SignUpPage = () => {
@@ -23,7 +22,7 @@ const SignUpPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Validate form fields
-    await signup(username,firstName,lastName,email,password,role);
+    await signup(username,firstName,lastName,password,email,role);
   };
 
   return (
@@ -118,7 +117,7 @@ const SignUpPage = () => {
         />
 
         {errors.password && <span className={styles.error}>{errors.password}</span>}
-        <input type="submit" value="Sign Up" className={styles.subbutton} onClick={(e) => useSignup()} />
+        <input type="submit" value="Sign Up" className={styles.button} onClick={(e) => useSignup()} />
       </form>
 
       {isSubmitted && (
@@ -131,6 +130,11 @@ const SignUpPage = () => {
 
     </div>
     </div>
+<<<<<<< HEAD
+=======
+
+  
+>>>>>>> 21d6163d39e14b5032122671f3b0a208b8e9e350
     <div>
 
           <footer className={styles.footer}>
