@@ -3,11 +3,6 @@ import { useRouter } from "next/router";
 import axios from "axios";
 import Link from "next/link";
 import styles from "./login.module.css";
-<<<<<<< HEAD
-=======
-import User from "../../server/models/user";
-import useLogin from "../hooks/useLogin";
->>>>>>> ed2b70cb54043d8b5c68b34b2c802534af076aec
 
 export default function LoginPage() {
   //const [errorMessage, setErrorMessage] = useState({});
@@ -35,11 +30,6 @@ export default function LoginPage() {
         } else {
           router.push("/technicianVentInfo");
         }
-<<<<<<< HEAD
-=======
-      } else {
-        //setErrorMessage({ name: "login", message: message });
->>>>>>> ed2b70cb54043d8b5c68b34b2c802534af076aec
       }
     } catch (error) {
       console.error("Error occurred while fetching user data:", error);
