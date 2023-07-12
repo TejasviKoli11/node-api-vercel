@@ -1,9 +1,47 @@
-import React, {useState} from 'react';
 import Link from 'next/link';
 import styles from './contact.module.css';
 import { FaHome, FaPhone, FaEnvelope, FaFax } from 'react-icons/fa'; 
+import React, { useEffect, useState } from 'react';
 
-function ContactUs() {       
+const addBuilding = () => {     
+
+  const [buildingData, setBuildingData] = useState([]);
+
+  const handleLinkClick = () => {
+    window.location.href = '/uservents';
+    window.location.href = '/uservents';
+  };
+
+  useEffect(() => {
+    const fetchBuildingData = async () => {
+      try {
+        const response = await axios.get('http://localhost:4000/buildings');
+        const data = response.data;
+        setBuildingData(data);
+      } catch (error) {
+        console.error('Error fetching building data:', error);
+      }
+    };
+
+    fetchBuildingData();
+  }, []);
+  
+//fetching the vent data
+  useEffect(() => {
+    const fetchVentData = async () => {
+      try {
+        const response = await axios.get('http://localhost:4000/buildings');
+        const data = response.data;
+        setBuildingData(data);
+      } catch (error) {
+        console.error('Error fetching building data:', error);
+      }
+    };
+
+    fetchVentData();
+  }, []);
+
+
     return (    
 <div>
       <nav className={styles.siteNavigation}>   
@@ -28,12 +66,25 @@ function ContactUs() {
         </div>
       </nav>
       
-      <div>
-      <h1> By phone</h1>
-      <h2> Monday to Friday, 9am to 4pm MST </h2>
-      <h2> Phone Number : +1 4034151434</h2> </div>
+      {/* displaying the building data */}
 
-      
+      <h1>Building Data</h1>
+      {buildingData.length > 0 ? (
+        buildingData.map((building) => (
+        <li key={building._id}>
+          <p>Name: {building.name}</p>
+          <p>Floors: {building.floors}</p>
+          
+        </li>
+      ))
+      ) : (
+        <div>
+        <p>No building data available</p>
+        <p><Link href='/viewVents'>View Vents</Link></p>
+        <a onClick={handleLinkClick}></a>
+        </div>
+      )}
+
 
       
       
@@ -111,4 +162,4 @@ function ContactUs() {
     );
   }
   
-  export default ContactUs;
+  export default addBuilding;

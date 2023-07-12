@@ -42,14 +42,13 @@ function Technician() {
 
     <div className={styles.diffdivs}>
       <div className={styles.itemdiv1} >
-        <h1>Div 1</h1>
         <nav className={styles.siteNavigation}>
             <div className={styles.container}>
             <Link href="/uservents" >
               <a onClick={handleLinkClick}></a>
             <p className={styles.buttonIN}> View Building </p>
             </Link>
-            <Link href="/uservents" >
+            <Link href="/addBuilding" >
               <a onClick={handleLinkClick}></a>
             <p className={styles.buttonIN}> Add Building </p>
             </Link>
@@ -60,8 +59,8 @@ function Technician() {
             </div>
         </nav>
       </div>
-      <div className={styles.itemdiv2} >
-        <h1>Div 2</h1>
+      <div className={styles.itemdiv2}>
+        
       </div>
     </div>
   </div>
