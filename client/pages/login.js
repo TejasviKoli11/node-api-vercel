@@ -139,13 +139,12 @@ import Link from "next/link";
 import { FaHome, FaPhone, FaEnvelope, FaFax } from 'react-icons/fa';
 import styles from "./login.module.css";
 import User from "../../server/models/user";
-import useLogin from "../hooks/useLogin";
-import { FaHome, FaPhone, FaEnvelope, FaFax } from 'react-icons/fa';
+//import useLogin from "../hooks/useLogin";
+//import { FaHome, FaPhone, FaEnvelope, FaFax } from 'react-icons/fa';
 
 import useLogin from "../hooks/useLogin";
 
 export default function LoginPage() {
-<<<<<<< HEAD
 
   //const [errorMessage, setErrorMessage] = useState({});
 
@@ -153,21 +152,11 @@ export default function LoginPage() {
 
   const { errorMessage, isSubmitted } = useLogin();
   const router = useRouter();
-=======
-  //const [errorMessage, setErrorMessage] = useState({});
-  //const [isSubmitted, setSubmitted] = useState(false);
-  const { errorMessage, isSubmitted } = useLogin();
-  const router = useRouter();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
->>>>>>> 21d6163d39e14b5032122671f3b0a208b8e9e350
   const handleSubmit = async (event) => {
     event.preventDefault();
 
 
     try {
-<<<<<<< HEAD
       login = await axios.post("/login", {
         username: uname.value,
         password: pass.value,
@@ -179,55 +168,27 @@ export default function LoginPage() {
         useLogin();
         if (body.user.role === "technician") {
           router.push("/uservents");
-=======
-      console.log(email, password);
-      axios.post('http://localhost:4000/login',{
-        email: email,
-        password: password
-      }).then((response)=>{
-        console.log(response.data);
-        var message = response.data;
-        if (message === "logged in") {
-          useLogin();
-          if (body.user.role === "technician") {
-            router.push("/uservents");
-            return;
-          } else {
-            router.push("/userStuffs");
-            return;
-          }
->>>>>>> 21d6163d39e14b5032122671f3b0a208b8e9e350
         } else {
-          //setErrorMessage({ name: "login", message: message });
+          router.push("/dashboard");
         }
-<<<<<<< HEAD
       } else {
         //setErrorMessage({ name: "login", message: message });
       }
 
-=======
-      }, (error) =>{
-        console.log(error);
-      });
->>>>>>> 21d6163d39e14b5032122671f3b0a208b8e9e350
     } catch (error) {
       console.error("Error occurred while fetching user data:", error);
       //setErrorMessage({ name: "login", message: "Internal server error" });
     }
   };
 
-<<<<<<< HEAD
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
   const renderErrorMessage = (name) =>
     name === errorMessage.name && (
       <div className={styles.error}>{errorMessage.message}</div>
 
     );
-=======
-  //const renderErrorMessage = (name) =>
-   // name === errorMessage.name && (
-    //  <div className={styles.error}>{errorMessage.message}</div>
-   // );
->>>>>>> 21d6163d39e14b5032122671f3b0a208b8e9e350
 
    //{renderErrorMessage("pass")}
    //{renderErrorMessage("uname")}
@@ -259,11 +220,7 @@ export default function LoginPage() {
             
           </div>
           <div className={styles.buttoncontainer}>
-<<<<<<< HEAD
             <input type="submit" value="Login" onClick={(e) => {useLogin}}/>
-=======
-            <input type="submit" value="Login" onClick={(e) => useLogin()}/>
->>>>>>> 21d6163d39e14b5032122671f3b0a208b8e9e350
           </div>
         </form>
         <Link href="/forgotpass" className={styles.fgtpass}>
@@ -313,19 +270,11 @@ export default function LoginPage() {
             renderForm
           )}
       </div>
-<<<<<<< HEAD
     </div>
     <div>
 
             <footer className={styles.footer}>
             <div className={styles.column}>
-=======
-    </div> 
-    <div>
-                <footer className={styles.footer}>
-            <div className={styles.column}>
-              
->>>>>>> 21d6163d39e14b5032122671f3b0a208b8e9e350
               <h3 id={styles.h3f}>About Us</h3>
               <p id={styles.pf}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consequat
@@ -340,23 +289,13 @@ export default function LoginPage() {
                 <li id={styles.lif}>Published Research</li>
               </ul>
             </div>
-<<<<<<< HEAD
             <div className={styles.column}>
-=======
-
-            <div className={styles.column}>
-
->>>>>>> 21d6163d39e14b5032122671f3b0a208b8e9e350
               <h3 id={styles.h3f}>Company</h3>
               <ul id={styles.ulf}>
                 <li id={styles.lif}>
                   <a href="/" id={styles.af}>Home</a>
                 </li>
-<<<<<<< HEAD
                 <li id={styles.lif}>
-=======
-                <li id={styles.lif}> 
->>>>>>> 21d6163d39e14b5032122671f3b0a208b8e9e350
                   <a href="/about" id={styles.af}>About Us</a>
                 </li>
                 <li id={styles.lif}>
@@ -367,11 +306,6 @@ export default function LoginPage() {
                 </li>
               </ul>
             </div>
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 21d6163d39e14b5032122671f3b0a208b8e9e350
             <div className={styles.column}>
               <h3 id={styles.h3f}>Contact Us</h3>
               <ul id={styles.ulf}>
@@ -392,18 +326,10 @@ export default function LoginPage() {
                   +123 456 7891
                 </li>
               </ul>
-<<<<<<< HEAD
-=======
-
->>>>>>> 21d6163d39e14b5032122671f3b0a208b8e9e350
             </div>
           </footer>
           </div>
       </div>
-<<<<<<< HEAD
-=======
-      
->>>>>>> 21d6163d39e14b5032122671f3b0a208b8e9e350
   );
 
 }

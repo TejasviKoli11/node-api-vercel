@@ -26,14 +26,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/login.js"
-<<<<<<< HEAD
-    ],
-    "/signup": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/signup.js"
-=======
->>>>>>> 21d6163d39e14b5032122671f3b0a208b8e9e350
     ]
   },
   "ampFirstPages": []
