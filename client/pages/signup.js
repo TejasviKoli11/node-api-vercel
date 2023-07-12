@@ -27,6 +27,8 @@ const SignUpPage = () => {
   };
 
   return (
+
+    //navigation bar code
 <div>
     <nav className={styles.siteNavigation}>
     <div className={styles.logo}>
@@ -49,9 +51,15 @@ const SignUpPage = () => {
         </Link>
     </div>
   </nav>
-
-
     <div className={styles.background}>
+    <div className={styles.addimage}>
+    <img src="ventImage.png" alt="ventImage"/>
+      <div className={styles.addTextonImage}>
+        <p>
+          Less pollution, less radiation, healthier home
+        </p>
+      </div>
+      </div>
     <div className={styles.container}>
       <h1 className={styles.title}>Sign Up</h1>
       <form className={styles.form} onSubmit={handleSubmit}>
@@ -64,10 +72,8 @@ const SignUpPage = () => {
           onChange={(e) => setUsername(e.target.value)}
           required
           className={styles.input}
-
         />
         {errors.username && <span className={styles.error}>{errors.username}</span>}
-
         <label htmlFor="firstName" className={styles.label}>First Name:</label>
         <input
           type="text"
@@ -100,7 +106,6 @@ const SignUpPage = () => {
         />
 
         {errors.email && <span className={styles.error}>{errors.email}</span>}
-
         <label htmlFor="password" className={styles.label}>Password:</label>
         <input
           type="password"
@@ -116,9 +121,6 @@ const SignUpPage = () => {
         <input type="submit" value="Sign Up" className={styles.subbutton} onClick={(e) => useSignup()} />
       </form>
 
-
-
-
       {isSubmitted && (
         <div className={styles.successMessage}>
           <p>Your account has been successfully created!</p>
@@ -129,20 +131,17 @@ const SignUpPage = () => {
 
     </div>
     </div>
-
-
     <div>
-                <footer className={styles.footer}>
+
+          <footer className={styles.footer}>
             <div className={styles.column}>
-              
+
               <h3 id={styles.h3f}>About Us</h3>
               <p id={styles.pf}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consequat
                 tellus eget sapien mollis, eu efficitur orci aliquet.
               </p>
             </div>
-
-
             <div className={styles.column}>
               <h3 id={styles.h3f}>Support</h3>
               <ul id={styles.ulf}>
@@ -153,13 +152,12 @@ const SignUpPage = () => {
             </div>
 
             <div className={styles.column}>
-
               <h3 id={styles.h3f}>Company</h3>
               <ul id={styles.ulf}>
                 <li id={styles.lif}>
                   <a href="/" id={styles.af}>Home</a>
                 </li>
-                <li id={styles.lif}> 
+                <li id={styles.lif}>
                   <a href="/about" id={styles.af}>About Us</a>
                 </li>
                 <li id={styles.lif}>
@@ -170,7 +168,6 @@ const SignUpPage = () => {
                 </li>
               </ul>
             </div>
-
 
             <div className={styles.column}>
               <h3 id={styles.h3f}>Contact Us</h3>
@@ -192,11 +189,9 @@ const SignUpPage = () => {
                   +123 456 7891
                 </li>
               </ul>
-
             </div>
           </footer>
           </div>
-
     </div>
   );
 };

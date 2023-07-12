@@ -8,6 +8,11 @@ const HomePage = () => {
   const [buildingData, setBuildingData] = useState([]);
   const [userData, setUserData] = useState([]);
 
+  const handleLinkClick = () => {
+    window.location.href = '/uservents';
+    window.location.href = '/uservents';
+  };
+
   useEffect(() => {
     const fetchRoomData = async () => {
       try {
@@ -25,11 +30,22 @@ const HomePage = () => {
   useEffect(() => {
     const fetchBuildingData = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/buildings');
-        const data = response.data;
+        //const response = 
+        await axios.post('http://localhost:4000/buildings',{id: "6492739d625cd683ff5a98f7"}).then((response)=>{
+
+      console.log(response.data);
+        var data=response.data;
         setBuildingData(data);
+      },
+      (error)=>{
+      
+        console.log(error);
+      
+      });
+        //const data = response.data;
+        //setBuildingData(data);
       } catch (error) {
-        console.error('Error fetching building data:', error);
+        console.error('Error fetching building data:', error); 
       }
     };
 
@@ -49,6 +65,23 @@ const HomePage = () => {
 
     fetchUserData();
   }, []);
+  
+  // adding room
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   try {
+  //     const response = await axios.post('http://localhost:4000/rooms', newRoom);
+  //     const createdRoom = response.data;
+  //     setRoomData([...roomData, createdRoom]);
+  //     setNewRoom({
+  //       name: '',
+  //       building: '',
+  //       floor: 0
+  //     });
+  //   } catch (error) {
+  //     console.error('Error creating room:', error);
+  //   }
+  // };
 
 
   return (
@@ -71,16 +104,73 @@ const HomePage = () => {
 
 
       <h1>Room Data</h1>
-      <ul>
+      {/* <ul>
         {roomData.map((room) => (
+          <table>
+            <tr>
           <li key={room._id}>
             <p>Name: {room.name}</p>
             <p>Building: {room.building}</p>
             <p>Floor: {room.floor}</p>
           </li>
+          </tr>
+          </table>
         ))}
-      </ul>
+      </ul> */}
+      <table className={styles.table1}>
+      <thead className={styles.thead}>
+      <tr className={styles.tr}>
+      <th className={styles.th}>Name</th>
+      <th className={styles.th}>Building</th>
+      <th className={styles.th}>Floor</th>
+    </tr>
+  </thead>
+  <tbody className={styles.tbody}>
+    {roomData.map((room) => (
+        <tr key={room._id}>
+          <Link href="/uservents"><a onClick={handleLinkClick}></a><td>{room.name}</td></Link>
+          <td>{room.building}</td>
+          <td>{room.floor}</td>
+        </tr>
+      )
+    )}
+  </tbody>
+</table>
 
+{/* adding room code */}
+{/* <h1>Add a Room</h1>
+      <form onSubmit={handleSubmit}>
+        <label>
+          Name:
+          <input
+            type="text"
+            name="name"
+            value={newRoom.name}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Building:
+          <input
+            type="text"
+            name="building"
+            value={newRoom.building}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Floor:
+          <input
+            type="number"
+            name="floor"
+            value={newRoom.floor}
+            onChange={handleChange}
+          />
+        </label>
+        <button type="submit">Add Room</button>
+      </form>
+    
+  ); */}
       <h1>Building Data</h1>
       <ul>
         {buildingData.map((building) => (

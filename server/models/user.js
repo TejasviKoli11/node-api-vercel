@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
 
 const userSchema = new Schema({
-    _id: {type: mongoose.Schema.Types.ObjectId},
     username: {type:String,required:true,unique:true,lowercase:true},
     firstName: {type:String,required:true},
     lastName: {type:String,required:true},
