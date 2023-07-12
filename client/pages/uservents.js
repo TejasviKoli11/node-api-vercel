@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import styles from './uservents.module.css';
+
 import axios from 'axios';
 
 const HomePage = () => {
   const [roomData, setRoomData] = useState([]);
+<<<<<<< HEAD
+=======
   const [buildingData, setBuildingData] = useState([]);
   const [userData, setUserData] = useState([]);
 
@@ -12,6 +15,7 @@ const HomePage = () => {
     window.location.href = '/uservents';
     window.location.href = '/uservents';
   };
+>>>>>>> b62f3d74456cf8e17e1019c49c99c906e06baac5
 
   useEffect(() => {
     const fetchRoomData = async () => {
@@ -33,6 +37,8 @@ const HomePage = () => {
         //const response = 
         await axios.post('http://localhost:4000/buildings',{id: "6492739d625cd683ff5a98f7"}).then((response)=>{
 
+<<<<<<< HEAD
+=======
       console.log(response.data);
         var data=response.data;
         setBuildingData(data);
@@ -84,9 +90,9 @@ const HomePage = () => {
   // };
 
 
+>>>>>>> b62f3d74456cf8e17e1019c49c99c906e06baac5
   return (
     <div>
-
 
 <nav className={styles.siteNavigation}>
             <div className={styles.logo}>
@@ -137,6 +143,9 @@ const HomePage = () => {
   </tbody>
 </table>
 
+<<<<<<< HEAD
+
+=======
 {/* adding room code */}
 {/* <h1>Add a Room</h1>
       <form onSubmit={handleSubmit}>
@@ -191,9 +200,11 @@ const HomePage = () => {
         ))}
       </ul>
       
+>>>>>>> b62f3d74456cf8e17e1019c49c99c906e06baac5
     </div>
   );
 };
 
-
 export default HomePage;
+
+

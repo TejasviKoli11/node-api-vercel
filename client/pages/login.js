@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React, { useState } from "react";
 // import { useRouter } from "next/router";
 // import axios from "axios";
@@ -130,13 +131,27 @@
 //   );
 // }
 
+=======
+>>>>>>> bcf069c950cab71f9c2771561ef9ab410d977fa4
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
 import Link from "next/link";
 import { FaHome, FaPhone, FaEnvelope, FaFax } from 'react-icons/fa';
 import styles from "./login.module.css";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> b62f3d74456cf8e17e1019c49c99c906e06baac5
 import User from "../../server/models/user";
+<<<<<<< HEAD
+=======
+//import useLogin from "../hooks/useLogin";
+//import { FaHome, FaPhone, FaEnvelope, FaFax } from 'react-icons/fa';
+=======
+>>>>>>> da18f363380b778ad6235abf53d3c6a97c07c92b
+
+>>>>>>> bcf069c950cab71f9c2771561ef9ab410d977fa4
 import useLogin from "../hooks/useLogin";
 
 export default function LoginPage() {
@@ -147,6 +162,18 @@ export default function LoginPage() {
 
   const { errorMessage, isSubmitted } = useLogin();
   const router = useRouter();
+<<<<<<< HEAD
+=======
+=======
+  //const [errorMessage, setErrorMessage] = useState({});
+  //const [isSubmitted, setSubmitted] = useState(false);
+  const { errorMessage, isSubmitted } = useLogin();
+  const router = useRouter();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+>>>>>>> da18f363380b778ad6235abf53d3c6a97c07c92b
+>>>>>>> bcf069c950cab71f9c2771561ef9ab410d977fa4
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -163,24 +190,76 @@ export default function LoginPage() {
         useLogin();
         if (body.user.role === "technician") {
           router.push("/uservents");
+<<<<<<< HEAD
+=======
+=======
+      console.log(email, password);
+      axios.post('http://localhost:4000/login',{
+        email: email,
+        password: password
+      }).then((response)=>{
+        console.log(response.data);
+        var message = response.data;
+        if (message === "logged in") {
+          useLogin();
+          if (body.user.role === "technician") {
+            router.push("/uservents");
+            return;
+          } else {
+            router.push("/userStuffs");
+            return;
+          }
+>>>>>>> da18f363380b778ad6235abf53d3c6a97c07c92b
+>>>>>>> bcf069c950cab71f9c2771561ef9ab410d977fa4
         } else {
-          //setErrorMessage({ name: "login", message: message });
+          router.push("/dashboard");
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> b62f3d74456cf8e17e1019c49c99c906e06baac5
+>>>>>>> bcf069c950cab71f9c2771561ef9ab410d977fa4
       } else {
         //setErrorMessage({ name: "login", message: message });
       }
 
+<<<<<<< HEAD
+=======
+=======
+      }, (error) =>{
+        console.log(error);
+      });
+>>>>>>> da18f363380b778ad6235abf53d3c6a97c07c92b
+>>>>>>> bcf069c950cab71f9c2771561ef9ab410d977fa4
     } catch (error) {
       console.error("Error occurred while fetching user data:", error);
       //setErrorMessage({ name: "login", message: "Internal server error" });
     }
   };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+>>>>>>> bcf069c950cab71f9c2771561ef9ab410d977fa4
   const renderErrorMessage = (name) =>
     name === errorMessage.name && (
       <div className={styles.error}>{errorMessage.message}</div>
 
     );
+<<<<<<< HEAD
+=======
+=======
+  //const renderErrorMessage = (name) =>
+   // name === errorMessage.name && (
+    //  <div className={styles.error}>{errorMessage.message}</div>
+   // );
+>>>>>>> da18f363380b778ad6235abf53d3c6a97c07c92b
+>>>>>>> bcf069c950cab71f9c2771561ef9ab410d977fa4
 
    //{renderErrorMessage("pass")}
    //{renderErrorMessage("uname")}
@@ -188,7 +267,7 @@ export default function LoginPage() {
     
     <div>
       <div className={styles.form}>
-        <form onSubmit={useLogin}>
+        <form onSubmit={handleSubmit}>
           <div className={styles.inputcontainer}>
             <label>Username</label>
             <input
@@ -213,6 +292,12 @@ export default function LoginPage() {
           </div>
           <div className={styles.buttoncontainer}>
             <input type="submit" value="Login" onClick={(e) => {useLogin}}/>
+<<<<<<< HEAD
+=======
+=======
+            <input type="submit" value="Login" onClick={(e) => useLogin()}/>
+>>>>>>> da18f363380b778ad6235abf53d3c6a97c07c92b
+>>>>>>> bcf069c950cab71f9c2771561ef9ab410d977fa4
           </div>
         </form>
         <Link href="/forgotpass" className={styles.fgtpass}>
@@ -267,6 +352,16 @@ export default function LoginPage() {
 
             <footer className={styles.footer}>
             <div className={styles.column}>
+<<<<<<< HEAD
+=======
+=======
+    </div> 
+    <div>
+                <footer className={styles.footer}>
+            <div className={styles.column}>
+              
+>>>>>>> da18f363380b778ad6235abf53d3c6a97c07c92b
+>>>>>>> bcf069c950cab71f9c2771561ef9ab410d977fa4
               <h3 id={styles.h3f}>About Us</h3>
               <p id={styles.pf}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consequat
@@ -282,12 +377,26 @@ export default function LoginPage() {
               </ul>
             </div>
             <div className={styles.column}>
+<<<<<<< HEAD
+=======
+=======
+
+            <div className={styles.column}>
+
+>>>>>>> da18f363380b778ad6235abf53d3c6a97c07c92b
+>>>>>>> bcf069c950cab71f9c2771561ef9ab410d977fa4
               <h3 id={styles.h3f}>Company</h3>
               <ul id={styles.ulf}>
                 <li id={styles.lif}>
                   <a href="/" id={styles.af}>Home</a>
                 </li>
                 <li id={styles.lif}>
+<<<<<<< HEAD
+=======
+=======
+                <li id={styles.lif}> 
+>>>>>>> da18f363380b778ad6235abf53d3c6a97c07c92b
+>>>>>>> bcf069c950cab71f9c2771561ef9ab410d977fa4
                   <a href="/about" id={styles.af}>About Us</a>
                 </li>
                 <li id={styles.lif}>
@@ -298,6 +407,14 @@ export default function LoginPage() {
                 </li>
               </ul>
             </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> da18f363380b778ad6235abf53d3c6a97c07c92b
+>>>>>>> bcf069c950cab71f9c2771561ef9ab410d977fa4
             <div className={styles.column}>
               <h3 id={styles.h3f}>Contact Us</h3>
               <ul id={styles.ulf}>
@@ -318,11 +435,24 @@ export default function LoginPage() {
                   +123 456 7891
                 </li>
               </ul>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+
+>>>>>>> da18f363380b778ad6235abf53d3c6a97c07c92b
+>>>>>>> bcf069c950cab71f9c2771561ef9ab410d977fa4
             </div>
           </footer>
           </div>
       </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+      
+>>>>>>> da18f363380b778ad6235abf53d3c6a97c07c92b
+>>>>>>> bcf069c950cab71f9c2771561ef9ab410d977fa4
   );
-
 }
 

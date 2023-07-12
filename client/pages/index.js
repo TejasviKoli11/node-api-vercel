@@ -34,7 +34,7 @@ function IndexPage() {
         <h1> Welcome to Our SmartVent Application!</h1>
         Our Smart Vent Application is designed to revolutionize the way you control the airflow and temperature in your home. With our intuitive and user-friendly interface, you can effortlessly optimize the comfort and energy efficiency of your living spaces.
 
-Experience Intelligent Airflow Management with our smart vent system. Our application allows you to adjust the airflow in each room individually or create custom zones to tailor the climate to your preference. </p> 
+Experience Intelligent Airflow Management with our smart vent system. Our application allows you to adjust the airflow in each room individually or create custom zones to tailor the climate to your preference. </p>
        </div>
 
 </div> 
