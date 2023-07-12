@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
 import Link from "next/link";
+import { FaHome, FaPhone, FaEnvelope, FaFax } from 'react-icons/fa';
 import styles from "./login.module.css";
+import User from "../../server/models/user";
+import useLogin from "../hooks/useLogin";
 
 export default function LoginPage() {
   //const [errorMessage, setErrorMessage] = useState({});
   //const [isSubmitted, setSubmitted] = useState(false);
-  const { errorMessage, isSubmitted, login } = useLogin();
+  const { errorMessage, isSubmitted } = useLogin();
   const router = useRouter();
 
   const handleSubmit = async (event) => {
@@ -30,6 +33,8 @@ export default function LoginPage() {
         } else {
           router.push("/technicianVentInfo");
         }
+      } else {
+        //setErrorMessage({ name: "login", message: message });
       }
     } catch (error) {
       console.error("Error occurred while fetching user data:", error);

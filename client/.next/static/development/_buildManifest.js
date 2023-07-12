@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-self.__BUILD_MANIFEST = {__rewrites:{beforeFiles:[],afterFiles:[],fallback:[]},"/":["static\u002Fchunks\u002Fpages\u002Findex.js"],"/_error":["static\u002Fchunks\u002Fpages\u002F_error.js"],sortedPages:["\u002F","\u002F_app","\u002F_error"]};self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
-=======
-self.__BUILD_MANIFEST = {__rewrites:{beforeFiles:[],afterFiles:[],fallback:[]},"/_error":["static\u002Fchunks\u002Fpages\u002F_error.js"],sortedPages:["\u002F_app","\u002F_error"]};self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
->>>>>>> ed2b70cb54043d8b5c68b34b2c802534af076aec
+self.__BUILD_MANIFEST = {__rewrites:{beforeFiles:[],afterFiles:[],fallback:[]},"/_error":["static\u002Fchunks\u002Fpages\u002F_error.js"],"/uservents":["static\u002Fchunks\u002Fpages\u002Fuservents.js"],sortedPages:["\u002F_app","\u002F_error","\u002Fuservents"]};self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()

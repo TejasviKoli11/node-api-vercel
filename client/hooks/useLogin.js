@@ -5,10 +5,10 @@ const useLogin = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [isSubmitted, setSubmitted] = useState(false);
 
-  const login = async (username, password) => {
+  const login = async (email, password) => {
     try {
       const response = await axios.post("/login", {
-        email: username,
+        email: email,
         password: password,
       });
 

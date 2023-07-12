@@ -5,7 +5,6 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import styles from './dashboard.module.css';
 import axios from 'axios';
 import Link from 'next/link';
-import './dashboard.module.css';
 
 function MysideNav() {
   const [selectedPage, setSelectedPage] = useState('uservents');
@@ -31,7 +30,7 @@ function MysideNav() {
   const renderPage = () => {
     switch (selectedPage) {
       case 'uservents':
-        return <div>
+        return <div  className={styles.body}>
         <nav className={styles.siteNavigation}>
             <div className={styles.logo}>
               <Link href="/">
@@ -46,7 +45,7 @@ function MysideNav() {
           </nav>
 
           <div className={styles.homediv}> 
-          Home Page
+         
             
           <h1>Room Data</h1>
           <ul>
@@ -63,11 +62,13 @@ function MysideNav() {
           </div>  
         </div>;
       case 'building':
-        return <div>Building Page</div>; // Replace with your actual component for Building Page
+        return <div className={styles.dashdiv}>Building Page</div>; // Replace with your actual component for Building Page
+      case 'viewroom':
+        return <div div className={styles.viewroom}>View Graph Page</div>; // Replace with your actual component for View Graph Page
       case 'viewgraph':
-        return <div>View Graph Page</div>; // Replace with your actual component for View Graph Page
+        return <div div className={styles.graphdiv}>View Graph Page</div>; // Replace with your actual component for View Graph Page
       case 'settings':
-        return <div>Settings Page</div>; // Replace with your actual component for Settings Page
+        return <div s>Settings Page</div>; // Replace with your actual component for Settings Page
       default:
         return null;
     }
@@ -90,6 +91,12 @@ function MysideNav() {
               <i className="fas fa-building-shield" style={{ fontSize: '1.5em' }} />
             </NavIcon>
             <NavText>Building</NavText>
+          </NavItem>         
+           <NavItem eventKey="viewrooom" cclassName={styles.navItem}>
+            <NavIcon>
+              <i className="fas fa-house" style={{ fontSize: '1.5em' }} />
+            </NavIcon>
+            <NavText>View Room</NavText>
           </NavItem>
           <NavItem eventKey="viewgraph" className={styles.navItem}>
             <NavIcon>
