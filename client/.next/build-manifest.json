@@ -22,10 +22,17 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
+<<<<<<< HEAD
     "/uservents": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/uservents.js"
+=======
+    "/login": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/login.js"
+>>>>>>> b62f3d74456cf8e17e1019c49c99c906e06baac5
     ]
   },
   "ampFirstPages": []

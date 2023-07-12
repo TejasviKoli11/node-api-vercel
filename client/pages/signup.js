@@ -3,8 +3,7 @@ import styles from './signup.module.css';
 import Link from 'next/link';
 import { FaHome, FaPhone, FaEnvelope, FaFax } from 'react-icons/fa';
 import { useSignup } from "../hooks/useSignUp";
-import User from "../../server/models/user";
-import axios from "axios";
+
 
 
 const SignUpPage = () => {
@@ -23,7 +22,7 @@ const SignUpPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     // Validate form fields
-    await signup(username,firstName,lastName,email,password,role);
+    await signup(username,firstName,lastName,password,email,role);
   };
 
   return (
@@ -51,8 +50,6 @@ const SignUpPage = () => {
         </Link>
     </div>
   </nav>
-
-
     <div className={styles.background}>
     <div className={styles.addimage}>
     <img src="ventImage.png" alt="ventImage"/>
@@ -74,10 +71,8 @@ const SignUpPage = () => {
           onChange={(e) => setUsername(e.target.value)}
           required
           className={styles.input}
-
         />
         {errors.username && <span className={styles.error}>{errors.username}</span>}
-
         <label htmlFor="firstName" className={styles.label}>First Name:</label>
         <input
           type="text"
@@ -110,7 +105,6 @@ const SignUpPage = () => {
         />
 
         {errors.email && <span className={styles.error}>{errors.email}</span>}
-
         <label htmlFor="password" className={styles.label}>Password:</label>
         <input
           type="password"
@@ -139,9 +133,10 @@ const SignUpPage = () => {
 
   
     <div>
-                <footer className={styles.footer}>
+
+          <footer className={styles.footer}>
             <div className={styles.column}>
-              
+
               <h3 id={styles.h3f}>About Us</h3>
               <p id={styles.pf}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean consequat
@@ -158,13 +153,12 @@ const SignUpPage = () => {
             </div>
 
             <div className={styles.column}>
-
               <h3 id={styles.h3f}>Company</h3>
               <ul id={styles.ulf}>
                 <li id={styles.lif}>
                   <a href="/" id={styles.af}>Home</a>
                 </li>
-                <li id={styles.lif}> 
+                <li id={styles.lif}>
                   <a href="/about" id={styles.af}>About Us</a>
                 </li>
                 <li id={styles.lif}>
@@ -175,7 +169,6 @@ const SignUpPage = () => {
                 </li>
               </ul>
             </div>
-
 
             <div className={styles.column}>
               <h3 id={styles.h3f}>Contact Us</h3>
@@ -197,11 +190,9 @@ const SignUpPage = () => {
                   +123 456 7891
                 </li>
               </ul>
-
             </div>
           </footer>
           </div>
-
     </div>
   );
 };

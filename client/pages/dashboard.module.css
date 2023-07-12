@@ -1,7 +1,156 @@
+<<<<<<< HEAD
 .siteNavigation {
   background-color: #0d98ba;
+=======
+.background{
+
+  background-color: #2B6864;
+height: auto;
+width: 1700px;
+
+
+}
+
+.dashboarditem {
+
+  background-color: #2B6864;
+
+  border: 1px solid #ccc;
+
+  padding: 20px;
+
+  margin-bottom: 10px;
+
+display: flex;
+
+align-items: center;
+
+justify-content: space-between;
+
+padding: 10px;
+
+
+}  
+
+.img{
+
+>>>>>>> b62f3d74456cf8e17e1019c49c99c906e06baac5
   display: flex;
+
+flex-direction: column;
+
+align-items: center;
+
+padding: 20px;
+
+background-color: #ffffff;
+
+border-radius: 10px;
+
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+transition: transform 0.3s ease;
+
+}
+
+
+
+
+
+
+.profile-icon img {
+
+  width: 30px;
+
+  height: 30px;
+
+  border-radius: 50%;
+
+}
+
+.searchbar input {
+
+width: 400px;
+
+  padding: 5px;
+
+  border: none;
+
+
+
+
+  border-radius: 5px;
+
+  outline: none;
+
+  background-color: #e9f4f3;
+
+}
+
+
+.text{
+
+  text-decoration-color: #ccc;
+
+}
+
+
+
+
+.loginlogouticons {
+  background-color: #e6efef;
+  color: #ccc;
+
+  width: 100px;
+
+  text-shadow: #ccc;
+
+  padding: 2px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  outline: none;
+
+}
+
+
+
+
+.signup{
+
+  background-color: #e6efef;
+
+  width: 100px;
+
+  text-shadow: #ccc;
+
+  padding: 2px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  outline: none;
+
+}
+
+
+
+
+
+
+.dashboarditem1 {
+
+  background-color: #2B6864;
+
+  border: 1px solid #fefcfc;
+
+  padding: 20px;
+
   align-items: center;
+<<<<<<< HEAD
   justify-content: space-between;
   padding: 1px 20px;
   height: 70px;
@@ -38,14 +187,40 @@ font-weight: bold;
   height: 100%;
   background-color: #f8f8f8;
 }
+=======
+
+  margin-bottom: 10px;
+
+  display:flex;
+
+
+}  
+
+
+
+
+/* styles/dashboard.css */
+
+
+
+
+
+>>>>>>> b62f3d74456cf8e17e1019c49c99c906e06baac5
 
 .container {
   background-color: white;
 }
 
+<<<<<<< HEAD
 .navItem {
   color: black;
 }
+=======
+
+
+
+  display: flex;
+>>>>>>> b62f3d74456cf8e17e1019c49c99c906e06baac5
 
 
 .logo{
@@ -100,6 +275,211 @@ font-weight: bold;
 }
 
 
+<<<<<<< HEAD
 .sidebar{
   background-color: #080202;
+=======
+}
+
+
+
+
+.sidebar {
+
+  background: #f1f1f1;
+
+  width: 200px;
+  height: 1200px;
+
+}
+
+
+
+
+.sidebar ul {
+
+
+  list-style: none;
+
+  padding: 0;
+
+  margin: 0;
+
+}
+
+
+
+
+
+.sidebar ul li {
+
+  margin-bottom: 10px;
+
+
+}
+
+
+
+
+.sidebar ul li a {
+
+  display: block;
+
+  color: #333;
+
+
+
+
+  text-decoration: none;
+
+
+
+
+  padding: 10px;
+
+}
+
+
+
+
+
+.sidebar ul li a:hover {
+
+
+
+
+  background: #ddd;
+
+
+
+
+
+}
+
+
+
+
+.main-content {
+
+
+  flex-grow: 1;
+
+
+  padding: 20px;
+}
+
+.dashboarditem2 {
+
+
+
+
+ background-color: #333;
+
+
+
+
+}
+
+
+.main{
+  align-items: center;
+  background-color: #f1f3f4;
+  border-radius: 30px;
+  box-shadow: 0px 3px 2px #1f4b48;
+  display: flex;
+  flex-direction: column;
+  left: 250px;
+  min-height: 480px;
+  padding: 7px 0;
+  position: absolute;
+  top: 150px;
+  width: 680px;
+}
+
+
+.temp{
+
+  align-items: center;
+  background-color: #93c0df;
+  border-radius: 20px;
+  box-shadow: 0px 3px 2px #1f4b48;
+  display: flex;
+  flex-direction: column;
+  left: 80px;
+  min-height: 280px;
+  padding: 7px 0;
+  position: absolute;
+  top: 100px;
+  width: 252px;
+}
+
+
+
+
+
+.temp2{
+  align-items: center;
+  background-color: #A8ECEA;
+  border-radius: 20px;
+  box-shadow: 0px 3px 2px #1f4b48;
+  display: flex;
+  flex-direction: column;
+  left: 350px;
+  min-height: 280px;
+  padding: 7px 0;
+  position: absolute;
+  top: 100px;
+  width: 252px;
+
+}
+
+
+
+
+
+
+
+
+.dashboarditem3 {
+
+
+  align-items: center;
+  background-color: #f1f3f4;
+  border-radius: 30px;
+  box-shadow: 0px 3px 2px #1f4b48;
+  display: flex;
+  flex-direction: column;
+  left: 950px;
+  min-height: 480px;
+  padding: 7px 0;
+  position: absolute;
+  top: 150px;
+  width: 680px;
+
+
+
+}
+
+
+
+
+
+
+.dashboarditem4 {
+
+ align-items: center;
+  background-color: #f1f3f4;
+  border-radius: 30px;
+  box-shadow: 0px 3px 2px #1f4b48;
+  display: flex;
+  flex-direction: column;
+  left: 250px;
+  min-height: 480px;
+  padding: 7px 0;
+  position: absolute;
+  top: 750px;
+  width: 1400px;
+
+
+>>>>>>> b62f3d74456cf8e17e1019c49c99c906e06baac5
 }
