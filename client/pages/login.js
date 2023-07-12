@@ -2,60 +2,74 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
 import Link from "next/link";
+import { FaHome, FaPhone, FaEnvelope, FaFax } from 'react-icons/fa';
 import styles from "./login.module.css";
+
+import useLogin from "../hooks/useLogin";
 
 export default function LoginPage() {
   //const [errorMessage, setErrorMessage] = useState({});
   //const [isSubmitted, setSubmitted] = useState(false);
-  const { errorMessage, isSubmitted, login } = useLogin();
+  const { errorMessage, isSubmitted } = useLogin();
   const router = useRouter();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = async (event) => {
     event.preventDefault();
- 
-    const { uname, pass } = event.target.elements;
+
 
     try {
-      loginInfo = await axios.post("/login", {
-        username: uname.value,
-        password: pass.value,
-      });
-
-      const { message, body } = login.data;
-
-      if (message === "logged in") {
-        useLogin();
-        if (body.user.role === "technician") {
-          router.push("/uservents");
+      console.log(email, password);
+      axios.post('http://localhost:4000/login',{
+        email: email,
+        password: password
+      }).then((response)=>{
+        console.log(response.data);
+        var message = response.data;
+        if (message === "logged in") {
+          useLogin();
+          if (body.user.role === "technician") {
+            router.push("/uservents");
+            return;
+          } else {
+            router.push("/userStuffs");
+            return;
+          }
         } else {
-          router.push("/technicianVentInfo");
+          //setErrorMessage({ name: "login", message: message });
         }
-      }
+      }, (error) =>{
+        console.log(error);
+      });
     } catch (error) {
       console.error("Error occurred while fetching user data:", error);
       //setErrorMessage({ name: "login", message: "Internal server error" });
     }
   };
 
-  const renderErrorMessage = (name) =>
-    name === errorMessage.name && (
-      <div className={styles.error}>{errorMessage.message}</div>
-    );
+  //const renderErrorMessage = (name) =>
+   // name === errorMessage.name && (
+    //  <div className={styles.error}>{errorMessage.message}</div>
+   // );
 
+   //{renderErrorMessage("pass")}
+   //{renderErrorMessage("uname")}
   const renderForm = (
     
     <div>
       <div className={styles.form}>
-        <form onSubmit={useLogin}>
+        <form onSubmit={handleSubmit}>
           <div className={styles.inputcontainer}>
             <label>Username</label>
             <input
               type="text"
               name="uname"
               required
+              onChange={(e)=>setEmail(e.target.value)}
               className={styles.label}
             />
-            {renderErrorMessage("uname")}
+           
           </div>
           <div className={styles.inputcontainer}>
             <label>Password</label>
@@ -63,12 +77,13 @@ export default function LoginPage() {
               type="password"
               name="pass"
               required
+              onChange={(e)=>setPassword(e.target.value)}
               className={styles.label}
             />
-            {renderErrorMessage("pass")}
+            
           </div>
           <div className={styles.buttoncontainer}>
-            <input type="submit" value="Login" onClick={(e) => {useLogin}}/>
+            <input type="submit" value="Login" onClick={(e) => useLogin()}/>
           </div>
         </form>
         <Link href="/forgotpass" className={styles.fgtpass}>
@@ -186,3 +201,4 @@ export default function LoginPage() {
       
   );
 }
+

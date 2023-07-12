@@ -10,7 +10,7 @@ const Building = require('../../models/building.js');
  
 
 // Get a specific building by ID
-routing.get('/buildings', async (req, res) => {
+routing.post('/buildings', async (req, res) => {
   try {
     const building = await Building.find({owner:req.body.id});
     if (!building) {
@@ -25,7 +25,7 @@ routing.get('/buildings', async (req, res) => {
  
 
 // Create a new building
-routing.post('/buildings', async (req, res) => {
+routing.post('/buildingsNew', async (req, res) => {
   try {
     const userModel = require('../../models/user.js');
     

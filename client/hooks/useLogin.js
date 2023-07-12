@@ -2,26 +2,25 @@ import { useState } from "react";
 import axios from "axios";
 
 const useLogin = () => {
-  const [errorMessage, setErrorMessage] = useState("");
-  const [isSubmitted, setSubmitted] = useState(false);
+ // const [isSubmitted, setSubmitted] = useState(false);
 
   const login = async (username, password) => {
     try {
-      const response = await axios.post("/login", {
+      console.log(username, password);
+      axios.post('http://localhost:4000/login',{
         email: username,
-        password: password,
-      }); 
-
-      const { message, body } = response.data;
-
-      if (message === "logged in") {
-        setSubmitted(true);
-        if (body.user.role === "technician") {
+        password: username
+      }).then((response)=>{
+        console.log(response.data);
+        if (message === "logged in") {
+          useLogin();
             router.push("/uservents");
-          } else {
-            router.push("/technicianVentInfo");
-          }
+        } else {
+          //setErrorMessage({ name: "login", message: message });
         }
+      }, (error) =>{
+        console.log(error);
+      });
       }
     catch (error) {
     setErrorMessage({ name: "login", message: message });
@@ -30,7 +29,8 @@ const useLogin = () => {
     }
   };
 
-  return { errorMessage, isSubmitted, login };
+  return { login };
 };
 
 export default useLogin;
+
