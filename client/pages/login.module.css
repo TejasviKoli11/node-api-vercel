@@ -2,25 +2,52 @@
   font-family: sans-serif;
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: right;  
   gap: 20px;
-  height: 97vh;
-  background-color:#fffff2;
+  height: 83vh;
+  background-color:#A8ECEA;
 }
 
+.addimage {
+  width: 900px;
+  height: auto;
+  position: relative;
+}
+
+.addimage img{
+  height: 100%;
+  width: 100%;
+}
+
+.addTextonImage{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 30px;
+  text-align: center;
+}
+
+.inputcontainer {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.inputcontainer {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
 
 .username {
   height: 25px;
   border: 1px solid rgba(0, 0, 0, 0.2);
-}
-
-.btnsubmit {
-  margin-top: 10px;
-  font-size: 15px;
-  background: #01d28e;
-  border: 1px solid #01d28e;
-  color: #fff;
-  padding: 10px 20px;
 }
 
 .buttoncontainer {
@@ -41,15 +68,13 @@
 }
 
 .loginform {
-  width: 70vh;
-  height: 70vh;
+  width: 50vh;
+  height: 50vh;
   background-color: rgb(255, 255, 255);
-  padding: 2rem;
+  padding: 10px;
+  margin-right: 20px;
+  border-radius: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.listcontainer {
-  display: flex;
 }
 
 .error {
@@ -65,31 +90,22 @@
   color: #035036;
 }
 
-.inputcontainer {
-  padding: 12px;
-  margin-bottom: 20px;
-  border: none;
-  border-radius: 6px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-}
 .label {
   font-weight: bold;
   margin-bottom: 10px;
   color: #555555;
   border: none;
-
 }
 
-
 .siteNavigation {
-    background-color: #0d98ba;
+    background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 30px;
     height: 70px;
   }
-  
+
   .logoButton {
     border: none;
     background: none;
@@ -99,18 +115,18 @@
     margin: 0;
     cursor: pointer;
   }
-  
+
   .menu {
     display: flex;
     justify-content: flex-end;
     margin: 0;
     padding: 0;
   }
-  
+
   .menu a {
     text-decoration: none;
   }
-  
+
   .button {
     color: #080202;
     border: none;
@@ -121,9 +137,9 @@
     margin: 0;
     cursor: pointer;
   }
-  
+
   .button:hover {
-    color: white;
+    color: #A8ECEA;
   }
 
   .footer {
@@ -134,42 +150,40 @@
     justify-content: space-around;
     flex-wrap: wrap;
   }
-  
   .column {
     flex-basis: 20%;
     padding: 20px;
     margin-bottom: 20px;
   }
-  
-  
+
   #h3f {
     color: #fff;
     font-size: 18px;
     margin-bottom: 10px;
   }
-  
+
   #pf {
     color: #ccc;
     font-size: 14px;
     line-height: 1.5;
   }
-  
+
   #ulf {
     list-style-type: none;
     padding: 0;
     margin: 0;
   }
-  
+
   #ulf #lif {
     margin-bottom: 10px;
   }
-  
+
   #af {
     color: #fff;
     text-decoration: none;
     font-size: 14px;
   }
-  
+
   .icon {
     margin-right: 10px;
   }

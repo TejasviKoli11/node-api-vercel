@@ -29,15 +29,9 @@ const useLogin = () => {
     setErrorMessage("Internal server error");
     }
   };
-<<<<<<< HEAD
-  return { errorMessage, isSubmitted, login };
-};
-export default useLogin
-=======
 
   return { login };
 };
 
 export default useLogin;
 
->>>>>>> da18f363380b778ad6235abf53d3c6a97c07c92b

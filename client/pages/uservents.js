@@ -104,19 +104,6 @@ const HomePage = () => {
 
 
       <h1>Room Data</h1>
-      {/* <ul>
-        {roomData.map((room) => (
-          <table>
-            <tr>
-          <li key={room._id}>
-            <p>Name: {room.name}</p>
-            <p>Building: {room.building}</p>
-            <p>Floor: {room.floor}</p>
-          </li>
-          </tr>
-          </table>
-        ))}
-      </ul> */}
       <table className={styles.table1}>
       <thead className={styles.thead}>
       <tr className={styles.tr}>
@@ -136,41 +123,6 @@ const HomePage = () => {
     )}
   </tbody>
 </table>
-
-{/* adding room code */}
-{/* <h1>Add a Room</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Name:
-          <input
-            type="text"
-            name="name"
-            value={newRoom.name}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Building:
-          <input
-            type="text"
-            name="building"
-            value={newRoom.building}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Floor:
-          <input
-            type="number"
-            name="floor"
-            value={newRoom.floor}
-            onChange={handleChange}
-          />
-        </label>
-        <button type="submit">Add Room</button>
-      </form>
-    
-  ); */}
       <h1>Building Data</h1>
       <ul>
         {buildingData.map((building) => (

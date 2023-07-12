@@ -1,31 +1,79 @@
 import Link from 'next/link';
-import styles from './contact.module.css';
+//import styles from './contact.module.css';
 import { FaHome, FaPhone, FaEnvelope, FaFax } from 'react-icons/fa'; 
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import styles from './uservents.module.css';
 
 const addBuilding = () => {     
 
   const [buildingData, setBuildingData] = useState([]);
+  const [buildingName, setBuildingName] = useState('');
+  const [floors, setFloors] = useState('');
 
   const handleLinkClick = () => {
     window.location.href = '/uservents';
     window.location.href = '/uservents';
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post('http://localhost:4000/buildings', {
+        name: buildingName,
+        floors: floors
+      });
+
+      // Clear form inputs after successful submission
+      setBuildingName('');
+      setFloors('');
+
+      console.log(response.data);
+    } catch (error) {
+      console.error('Error adding building:', error);
+    }
+  };
+
+  // useEffect(() => {
+  //   const fetchBuildingData = async () => {
+  //     try {
+  //       const response = await axios.get('http://localhost:4000/buildings');
+  //       const data = response.data;
+  //       setBuildingData(data);
+  //     } catch (error) {
+  //       console.error('Error fetching building data:', error);
+  //     }    
+  //   };
+
+  //   fetchBuildingData();
+  // }, []);
+  
   useEffect(() => {
     const fetchBuildingData = async () => {
       try {
-        const response = await axios.get('http://localhost:4000/buildings');
-        const data = response.data;
+        //const response = 
+        await axios.post('http://localhost:4000/buildings',{id: "6492739d625cd683ff5a98f7"}).then((response)=>{
+
+      console.log(response.data);
+        var data=response.data;
         setBuildingData(data);
+      },
+      (error)=>{
+      
+        console.log(error);
+      
+      });
+        //const data = response.data;
+        //setBuildingData(data);
       } catch (error) {
-        console.error('Error fetching building data:', error);
+        console.error('Error fetching building data:', error); 
       }
     };
 
     fetchBuildingData();
   }, []);
-  
+
 //fetching the vent data
   useEffect(() => {
     const fetchVentData = async () => {
@@ -69,27 +117,56 @@ const addBuilding = () => {
       {/* displaying the building data */}
 
       <h1>Building Data</h1>
-      {buildingData.length > 0 ? (
-        buildingData.map((building) => (
-        <li key={building._id}>
-          <p>Name: {building.name}</p>
-          <p>Floors: {building.floors}</p>
-          
-        </li>
-      ))
-      ) : (
+      <table className={styles.table1}>
+        <thead className={styles.thead}>
+          <tr className={styles.tr}>
+            <th className={styles.th}>Name</th>
+            <th className={styles.th}>Floors</th>
+            <th className={styles.th}>Add buildings</th>
+            <th className={styles.th}>View Vents</th>
+          </tr>
+        </thead>
+        <tbody className={styles.tbody}>
+          {buildingData.map((building) => (
+            <tr key={building._id}>
+              <td>{building.name}</td>
+              <td>{building.floors}</td>
+              <td><p><Link href='/viewVents'>View Vents</Link></p>
+                  <a onClick={handleLinkClick}></a>
+              </td>
+              <td><p><Link href='/viewVents'>Add Building</Link></p>
+                  <a onClick={handleLinkClick}></a>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      {/* Building Form */}
+      <h1>Add Building</h1>
+      <form onSubmit={handleSubmit}>
         <div>
-        <p>No building data available</p>
-        <p><Link href='/viewVents'>View Vents</Link></p>
-        <a onClick={handleLinkClick}></a>
+          <label>Building Name:</label>
+          <input
+            type="text"
+            value={buildingName}
+            onChange={(e) => setBuildingName(e.target.value)}
+            required
+          />
         </div>
-      )}
-
-
+        <div>
+          <label>Floors:</label>
+          <input
+            type="number"
+            value={floors}
+            onChange={(e) => setFloors(e.target.value)}
+            required
+          />
+        </div>
+        <button type="submit">Add Building</button>
+      </form>
       
-      
-
-      <div>
+      {/* <div>
             <footer className={styles.footer}>
         <div className={styles.column}>
           
@@ -153,7 +230,7 @@ const addBuilding = () => {
 
         </div>
       </footer>
-      </div>
+      </div> */}
 
 
     </div>
