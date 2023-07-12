@@ -11,11 +11,11 @@ const useLogin = () => {
         email: username,
         password: username
       }).then((response)=>{
-        console.log(response.data);
+        console.log(response.data.body.token);
         if (message === "logged in") {
           useLogin();
-          console.log(response.data.body)
-            router.push("/uservents");
+          localStorage.setItem('token', response.data);
+            router.push("/dashboard");
         } else {
           //setErrorMessage({ name: "login", message: message });
         }
