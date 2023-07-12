@@ -14,6 +14,7 @@ const useLogin = () => {
         console.log(response.data);
         if (message === "logged in") {
           useLogin();
+          console.log(response.data.body)
             router.push("/uservents");
         } else {
           //setErrorMessage({ name: "login", message: message });
