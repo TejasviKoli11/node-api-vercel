@@ -419,9 +419,6 @@ export default function LoginPage() {
 
 =======
             <div className={styles.column}>
-<<<<<<< HEAD
-=======
-=======
 
             <div className={styles.column}>
 
@@ -454,19 +451,7 @@ export default function LoginPage() {
                 </li>
               </ul>
             </div>
-<<<<<<< HEAD
 
-
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-
->>>>>>> da18f363380b778ad6235abf53d3c6a97c07c92b
->>>>>>> bcf069c950cab71f9c2771561ef9ab410d977fa4
->>>>>>> cab2d32d2c12a1942d38c0b093bc27be8b3b5dd9
             <div className={styles.column}>
               <h3 id={styles.h3f}>Contact Us</h3>
               <ul id={styles.ulf}>
